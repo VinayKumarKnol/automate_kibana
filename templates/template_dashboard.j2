@@ -1,0 +1,13 @@
+{
+  "title": "{{ title }}-{{ env | upper }}",
+  "hits": 0,
+  "description": "",
+  "panelsJSON": "[{% for visual in visualIds %}{\"size_x\":6,\"size_y\":3,\"panelIndex\":{{ visual.index }},\"type\":\"visualization\",\"id\":\"{{ visual.id }}\",\"col\":{{ visual.col }},\"row\":{{ visual.row }}}{{ visual.delim }}{% endfor %}]",
+  "optionsJSON": "{\"darkTheme\":false}",
+  "uiStateJSON": "{}",
+  "version": 1,
+  "timeRestore": false,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[{\"query\":{\"match_all\":{}}}],\"highlightAll\":true,\"version\":true}"
+  }
+}

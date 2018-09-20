@@ -1,0 +1,32 @@
+dashboard:
+  -  id: cluster_memory_red
+     title: Cluster & Memory Dashboard
+     env: red
+     visualIds:
+       -
+         id: cpu_load_average_red
+         index: 1
+         col: 1
+         row: 1
+         delim: ','
+       -
+         id: jvm_mem_used_red
+         index: 2
+         col: 7
+         row: 1
+         delim: ''
+  - id: cluster_memory_blue
+    title: Cluster & Memory Dashboard
+    env: blue
+    visualIds:
+    - id: cpu_load_average_blue
+      index: 1
+      col: 1
+      row: 1
+      delim: ','
+    - id: jvm_mem_used_blue
+      index: 2
+      col: 7
+      row: 1
+      delim: ''
+

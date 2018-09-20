@@ -1,0 +1,36 @@
+---
+watchers:
+  -
+    id: es-watcher-cpu
+    interval: 1m
+    indices: ".monitoring-es-6-*"
+    gte: "now-2m"
+    field_to_aggregate: "node_stats.process.cpu.percent"
+    condition_script: "if (ctx.payload.aggregations.minutes.buckets.size() == 0) return false; def latest = ctx.payload.aggregations.minutes.buckets[-1]; def node = latest.nodes.buckets[0]; return node.cpu.value >= 95;"
+    transform_script: "def latest = ctx.payload.aggregations.minutes.buckets[-1]; return latest.nodes.buckets.stream().filter(it -> it.cpu.value >= 95).collect(Collectors.toList());"
+    mail_alert_to: "sahil.sawhney@knoldus.in"
+    email_subject: "Watcher Notification - HIGH CPU USAGE ON ES"
+    body_of_email: 'Nodes with HIGH CPU Usage (above 95%):\n\n{{#ctx.payload._value}}\"{{key}}\" - CPU Usage is at {{cpu.value}}%\n{{/ctx.payload._value}}'
+
+  -
+    id: memory-usuage-jvm
+    interval: 1m
+    indices: ".monitoring-es-6-*"
+    gte: "now-2m"
+    field_to_aggregate: "node_stats.jvm.mem.heap_used_percent"
+    condition_script: "if (ctx.payload.aggregations.minutes.buckets.size() == 0) return false; def latest = ctx.payload.aggregations.minutes.buckets[-1]; def node = latest.nodes.buckets[0]; return node.memory.value >= 80;"
+    transform_script: "def latest = ctx.payload.aggregations.minutes.buckets[-1]; return latest.nodes.buckets.stream().filter(it -> it.memory.value >= 80).collect(Collectors.toList());"
+    mail_alert_to: "sahil.sawhney@knoldus.in"
+    email_subject: "Watcher Notification - HIGH MEMORY USAGE ON ES"
+    body_of_email: 'Nodes with HIGH MEMORY USAGE (above 75%):\n\n{{#ctx.payload._value}}\"{{key}}\" - MEMORY USAGE is {{memory.value}}%\n{{/ctx.payload._value}}'
+
+  - id: load-average
+    interval: 1m
+    indices: ".monitoring-es-6-*"
+    gte: "now-2m"
+    field_to_aggregate: "node_stats.os.cpu.load_average.15m"
+    condition_script: "if (ctx.payload.aggregations.minutes.buckets.size() == 0) return false; def latest = ctx.payload.aggregations.minutes.buckets[-1]; def node = latest.nodes.buckets[0]; return node.load_average.value >= 38;"
+    transform_script: "def latest = ctx.payload.aggregations.minutes.buckets[-1]; return latest.nodes.buckets.stream().filter(it -> it.load_average.value >= 38).collect(Collectors.toList());"
+    mail_alert_to: "sahil.sawhney@knoldus.in"
+    email_subject: "Watcher Notification - HIGH LOAD AVERAGE ON ES"
+    body_of_email: 'Nodes with HIGH LOAD AVERAGE (above 75%):\n\n{{#ctx.payload._value}}\"{{key}}\" - LOAD AVERAGE is at {{load_average.value}}%\n{{/ctx.payload._value}}'

@@ -1,0 +1,69 @@
+{
+  "trigger": {
+    "schedule": {
+      "interval": "{{ interval }}"
+    }
+  },
+  "input": {
+    "search": {
+      "request": {
+        "indices": ["{{ indices }}"],
+        "body": {
+          "size" : 0,
+          "query": {
+            "bool": {
+              "filter": {
+                "range": {
+                  "timestamp": {
+                    "gte": "{{ gte }}",
+                    "lte": "now"
+                  }
+                }
+              }
+            }
+          },
+          "aggs": {
+            "minutes": {
+              "date_histogram": {
+                "field": "timestamp",
+                "interval": "1m"
+              },
+              "aggs": {
+                "nodes": {
+                  "terms": {
+                    "field": "source_node.ip",
+                    "order": {
+                      "cpu": "desc"
+                    }
+                  },
+                  "aggs": {
+                    "cpu": {
+                      "avg": {
+                        "field": "{{ field_to_aggregate }}"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "condition": {
+    "script":  "{{ condition_script }}"
+  },
+  "actions": {
+    "send_email": { 
+      "transform": {
+        "script": "{{ transform_script }}"
+      },
+      "email": {
+        "to": "{{ alert_to }}",
+        "subject": "{{ email_subject }}",
+        "body": "{{ body_of_email }}"
+      }
+    }
+  }
+}
