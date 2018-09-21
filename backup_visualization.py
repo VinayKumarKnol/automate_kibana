@@ -4,27 +4,44 @@ import json
 import requests
 import yaml
 import os
+import jinja2
 from string import Template
+import re
+import time
 
 
 def main(args):
-    config_location = 'config'
-    file_name = args.backup_file
+    path_conf, filename_conf = os.path.split(args.backup_file)
 
-    if not os.path.exists(config_location):
-        os.makedirs(config_location)
+    if not os.path.exists(path_conf):
+        os.makedirs(path_conf)
 
-    with open(config_location + '/' + file_name, 'w') as backup_file:
+    with open(path_conf + '/' + filename_conf, 'w') as backup_file:
         backup_file.write(yaml_header)
         for id in getAllTheVisualizations(args):
             backup_file.write(loadVisualizationJSON(args, id))
             print "done: " + id
+    modifyBackupTemplate(args)
+
+
+def modifyBackupTemplate(args):
+    tmp_dir = 'config'
+    file_name = 'backup_file_'+ time.strftime("%Y-%m-%d %H:%M:%S") + '.yaml'
+    path_conf, filename_conf = os.path.split(args.backup_file)
+    templateFilePath_conf = jinja2.FileSystemLoader(path_conf or './')
+    jinjaEnv_conf = jinja2.Environment(loader=templateFilePath_conf,
+                                       trim_blocks=True,
+                                       lstrip_blocks=True)
+    jTemplate_conf = jinjaEnv_conf.get_template(filename_conf).render(env=args.cluster_env)
+    outFile_conf = open(tmp_dir + '/' + file_name, 'w')
+    outFile_conf.write(jTemplate_conf)
+    outFile_conf.close()
 
 
 def getAllTheVisualizations(args):
     elk_url = fetchElasticURL(args.dcos_cluster_url) + \
               "_search?pretty&&size=" + total_visualizations
-    search_result = requests.get(elk_url).json()
+    search_result = requests.get(elk_url, json=json.loads(query_json)).json()
     visuals_jsons = search_result['hits']['hits']
     visual_ids = []
     for visual in visuals_jsons:
@@ -35,18 +52,24 @@ def getAllTheVisualizations(args):
 
 def loadVisualizationJSON(args, visual_index):
     elk_url = fetchElasticURL(args.dcos_cluster_url)
+    blue_replace = re.compile(re.escape('blue'), re.IGNORECASE)
     visual_url = elk_url + visual_index
     visual_json = requests.get(visual_url).json()
     return yaml_template.substitute(
         id=visual_json['_id'],
-        title=visual_json['_source']['title'],
+        title=blue_replace.sub('{{ env }}', visual_json['_source']['title']),
         env='all',
-        visState=json.dumps(visual_json['_source']['visState']).strip('"'),
-        uiStateJSON=json.dumps(visual_json['_source']['uiStateJSON']).strip('"'),
-        searchSourceJSON=visual_json['_source']
+        visState=json.dumps(blue_replace.
+                            sub('{{ env }}', visual_json['_source']['visState'])
+                            ).strip('"'),
+        uiStateJSON=json.dumps(blue_replace.sub('{{ env }}',
+                                                visual_json['_source']['uiStateJSON'])
+                               ).strip('"'),
+        searchSourceJSON=json.dumps(blue_replace.sub('{{ env }}', visual_json['_source']
         ['kibanaSavedObjectMeta']
-        ['searchSourceJSON']
-            .replace('"', '\\"')
+        ['searchSourceJSON'])
+                                    )
+            .strip('"')
     )
 
 
@@ -79,6 +102,8 @@ def parseArgs():
                         help='Cluster where these visualisations are needed')
     parser.add_argument('-b', '--backup_file', type=str, required=True,
                         help='Name of backup file  in YAML')
+    parser.add_argument('-e', '--cluster_env', type=str, required=True,
+                        help='Environment for visualisation')
     args = parser.parse_args()
     return args
 
@@ -87,7 +112,6 @@ total_visualizations = '1'
 yaml_header = '''
 ---
 visuals:
-
 '''
 yaml_template = Template('''
   -
@@ -95,9 +119,20 @@ yaml_template = Template('''
     title: $title
     env: $env
     visState: '$visState'
-    uiStateJSON: $uiStateJSON
+    uiStateJSON: '$uiStateJSON'
     searchSourceJSON: '$searchSourceJSON'
     ''')
+
+query_json = '''
+{            
+  "query" : {
+    "multi_match" : {
+      "query": "blue",
+      "fields": ["title", "query"]
+     }
+  }
+}
+'''
 
 args = parseArgs()
 if __name__ == '__main__':
