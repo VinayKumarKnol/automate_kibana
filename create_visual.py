@@ -84,7 +84,7 @@ def load_config(args):
         # else:
         #     print ">>Visual: " + visual['id']
         #     print "Has wrong query."
-    return file_locations, tmp_dirtype
+    return file_locations, tmp_dir
 
 
 def parseArgs():
