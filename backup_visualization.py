@@ -57,10 +57,11 @@ def loadVisualizationJSON(args, visual_index):
     blue_replace = re.compile(re.escape('blue'), re.IGNORECASE)
     visual_url = elk_url + visual_index
     visual_json = requests.get(visual_url).json()
+    visual_id = re.sub(r'\W+', '_', visual_json['_source']['title']).lower()
     return yaml_template.substitute(
-        id=visual_json['_id'],
+        id=blue_replace.sub('{{ env }}', visual_id),
         title=blue_replace.sub('{{ env }}', visual_json['_source']['title']),
-        env='all',
+        env='{{ env }}',
         visState=json.dumps(blue_replace.
                             sub('{{ env }}', visual_json['_source']['visState'])
                             ).strip('"'),
