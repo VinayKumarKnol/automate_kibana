@@ -8,9 +8,9 @@ import requests
 
 
 def main(args):
-    dcos_cluster_name = fetchClusterName(args.dcos_cluster_url)
+    dcos_elk_url = fetchClusterName(args.dcos_cluster_url)
 
-    if dcos_cluster_name is None:
+    if dcos_elk_url is None:
         print(">>Invalid DCOS Cluster url")
         return
     visuals_json, tmp_dir = load_config(args)
@@ -19,8 +19,7 @@ def main(args):
         return
     for id, visual in visuals_json:
         print id, visual
-        elk_url = "http://monit-es-" + dcos_cluster_name + \
-                  ".storefrontremote.com/.kibana/visualization/" + id
+        elk_url = dcos_elk_url + "visualization/" + id
         print elk_url
         with open(tmp_dir + '/' + visual, 'r') as json_file:
             payload = json.load(json_file)
@@ -31,8 +30,7 @@ def main(args):
 
 
 def validateQuery(config, dcos_cluster):
-    query_url = 'http://monit-es-' + dcos_cluster + \
-                '.storefrontremote.com/.kibana/_doc/_validate/query?q=\"' + \
+    query_url = dcos_cluster + '_doc/_validate/query?q=\"' + \
                 config['query'] + "\""
     response = json.loads(requests.get(query_url).content)
     if response['valid'] is True:
@@ -43,9 +41,9 @@ def validateQuery(config, dcos_cluster):
 
 def fetchClusterName(dcos_cluster_url):
     if "rigel" in dcos_cluster_url:
-        return "rigel"
+        return "http://monit-es-rigel.storefrontremote.com/.kibana/"
     elif "saturn" in dcos_cluster_url:
-        return "saturn"
+        return "http://elk-saturn.storefrontremote.com/.kibana/"
     elif "neptune" in dcos_cluster_url:
         return "neptune"
     elif "jupiter" in dcos_cluster_url:
@@ -80,12 +78,13 @@ def load_config(args):
     for visual in config['visuals']:
         visual['title'] = visual['title'] + " " + visual['env']
         visual['id'] = visual['id'].lower() + "_" + visual['env'].lower()
-        if validateQuery(visual, fetchClusterName(args.dcos_cluster_url)):
-            file_locations.append(create_bundle_conf_file(args, visual, tmp_dir))
-        else:
-            print ">>Visual: " + visual['id']
-            print "Has wrong query."
-    return file_locations, tmp_dir
+        file_locations.append(create_bundle_conf_file(args, visual, tmp_dir))
+        # if validateQuery(visual, fetchClusterName(args.dcos_cluster_url)):
+        #
+        # else:
+        #     print ">>Visual: " + visual['id']
+        #     print "Has wrong query."
+    return file_locations, tmp_dirtype
 
 
 def parseArgs():

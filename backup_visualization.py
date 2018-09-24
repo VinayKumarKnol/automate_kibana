@@ -26,7 +26,9 @@ def main(args):
 
 def modifyBackupTemplate(args):
     tmp_dir = 'config'
-    file_name = 'backup_file_'+ time.strftime("%Y-%m-%d %H:%M:%S") + '.yaml'
+    file_name = ('backup_file_' +
+                 time.strftime("%Y-%m-%d %H:%M:%S") +
+                 '.yaml').replace(' ', '_')
     path_conf, filename_conf = os.path.split(args.backup_file)
     templateFilePath_conf = jinja2.FileSystemLoader(path_conf or './')
     jinjaEnv_conf = jinja2.Environment(loader=templateFilePath_conf,
