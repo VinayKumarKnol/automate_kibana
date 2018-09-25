@@ -8,7 +8,7 @@ import requests
 
 
 def main(args):
-    dcos_elk_url = fetchClusterName(args.dcos_cluster_url)
+    dcos_elk_url = fetchClusterName(args.dcos_cluster_name)
 
     if dcos_elk_url is None:
         print(">>Invalid DCOS Cluster url")
@@ -30,23 +30,22 @@ def main(args):
 
 
 def validateQuery(config, dcos_cluster):
-    query_url = dcos_cluster + '_doc/_validate/query?q=\"' + \
-                config['query'] + "\""
-    response = json.loads(requests.get(query_url).content)
+    query_url = dcos_cluster + '_doc/_validate/query?'
+    response = json.loads(requests.get(query_url, json=config['query']).content)
     if response['valid'] is True:
         return True
     else:
         return False
 
 
-def fetchClusterName(dcos_cluster_url):
-    if "rigel" in dcos_cluster_url:
+def fetchClusterName(dcos_cluster_name):
+    if "rigel" in dcos_cluster_name:
         return "http://monit-es-rigel.storefrontremote.com/.kibana/"
-    elif "saturn" in dcos_cluster_url:
+    elif "saturn" in dcos_cluster_name:
         return "http://elk-saturn.storefrontremote.com/.kibana/"
-    elif "neptune" in dcos_cluster_url:
+    elif "neptune" in dcos_cluster_name:
         return "neptune"
-    elif "jupiter" in dcos_cluster_url:
+    elif "jupiter" in dcos_cluster_name:
         return "jupiter"
 
 
@@ -79,7 +78,7 @@ def load_config(args):
         visual['title'] = visual['title'] + " " + visual['env']
         visual['id'] = visual['id'].lower() + "_" + visual['env'].lower()
         file_locations.append(create_bundle_conf_file(args, visual, tmp_dir))
-        # if validateQuery(visual, fetchClusterName(args.dcos_cluster_url)):
+        # if validateQuery(visual, fetchClusterName(args.dcos_cluster_name)):
         #
         # else:
         #     print ">>Visual: " + visual['id']
@@ -93,7 +92,7 @@ def parseArgs():
                         help='Jinja2 template configuration yaml file')
     parser.add_argument('-tc', '--template_conf', type=str, required=True,
                         help='Jinja2 template file for config')
-    parser.add_argument('-u', '--dcos_cluster_url', type=str, required=True,
+    parser.add_argument('-u', '--dcos_cluster_name', type=str, required=True,
                         help='Cluster where these visualisations are needed')
     args = parser.parse_args()
     return args

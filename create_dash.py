@@ -8,9 +8,9 @@ import json
 
 
 def main(args):
-    dcos_cluster_name = fetchClusterName(args.dcos_cluster_url)
+    elk_url = fetchClusterName(args.dcos_cluster_name)
 
-    if dcos_cluster_name is None:
+    if elk_url is None:
         print(">>Invalid DCOS Cluster url")
         return
 
@@ -19,9 +19,8 @@ def main(args):
         print ">>There are no dashboards to put on kibana."
         return
     for id, dashboard in dashboard_jsons:
-        elk_url = "http://monit-es-" + args.dcos_cluster_url + \
-                  ".storefrontremote.com/.kibana/dashboard/" \
-                  + id
+        elk_url = elk_url + \
+                  "dashboard/" + id
         with open(tmp_dir + '/' + dashboard, 'r') as json_file:
             payload = json.load(json_file)
             response = json.loads(requests.put(elk_url, json=payload).content)
@@ -30,14 +29,14 @@ def main(args):
     return
 
 
-def fetchClusterName(dcos_cluster_url):
-    if "rigel" in dcos_cluster_url:
-        return "rigel"
-    elif "saturn" in dcos_cluster_url:
-        return "saturn"
-    elif "neptune" in dcos_cluster_url:
+def fetchClusterName(dcos_cluster_name):
+    if "rigel" in dcos_cluster_name:
+        return "http://monit-es-rigel.storefrontremote.com/.kibana/"
+    elif "saturn" in dcos_cluster_name:
+        return "http://elk-saturn.storefrontremote.com/.kibana/"
+    elif "neptune" in dcos_cluster_name:
         return "neptune"
-    elif "jupiter" in dcos_cluster_url:
+    elif "jupiter" in dcos_cluster_name:
         return "jupiter"
 
 
@@ -59,7 +58,7 @@ def parseArgs():
     parser = argparse.ArgumentParser(description='Python template engine using jinja2')
     parser.add_argument('-c', '--config', type=str, required=True,
                         help='Configuration Yaml File for J2 Templates')
-    parser.add_argument('-u', '--dcos_cluster_url', type=str, required=True,
+    parser.add_argument('-u', '--dcos_cluster_name', type=str, required=True,
                         help='dcos cluster where dashboards are needed.')
     parser.add_argument('-tc', '--template_conf', type=str, required=True,
                         help='Jinja2 template file for config')

@@ -1,7 +1,7 @@
 dashboard:
-  -  id: cluster_memory_red
+  -  id: cluster_memory
      title: Cluster & Memory Dashboard
-     env: red
+     env: [red, blue]
      visualIds:
        -
          id: cpu_load_average_red
@@ -15,18 +15,3 @@ dashboard:
          col: 7
          row: 1
          delim: ''
-  - id: cluster_memory_blue
-    title: Cluster & Memory Dashboard
-    env: blue
-    visualIds:
-    - id: cpu_load_average_blue
-      index: 1
-      col: 1
-      row: 1
-      delim: ','
-    - id: jvm_mem_used_blue
-      index: 2
-      col: 7
-      row: 1
-      delim: ''
-
