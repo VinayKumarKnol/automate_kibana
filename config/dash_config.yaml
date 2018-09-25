@@ -1,16 +1,22 @@
 dashboard:
-  -  id: cluster_memory
-     title: Cluster & Memory Dashboard {{ env }}
+  -  id: demo_test_all
+     title: JVM storeserv {{ env }}
      visualIds:
        -
-         id: cpu_load_average_{{ env }}
+         id: AWVqh4yBfYD2jhh3To3S
          index: 1
          row: 1
          col: 1
          delim: ','
        -
-         id: jvm_mem_used_{{ env }}
+         id: AWVqh4yBfYD2jhh3To3S
          index: 2
          row: 1
          col: 7
+         delim: ','
+       -
+         id: 3ccc7380-d602-11e7-a774-c3d7f8e4d9bd
+         index: 3
+         row: 2
+         col: 1
          delim: ''

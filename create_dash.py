@@ -24,9 +24,9 @@ def main(args):
         with open(tmp_dir + '/' + dashboard, 'r') as json_file:
             payload = json.load(json_file)
             print payload
-            # response = json.loads(requests.put(elk_url, json=payload).content)
-            # print ">>status of dashboard: " + id + " :"
-            # print response
+            response = json.loads(requests.put(elk_url, json=payload).content)
+            print ">>status of dashboard: " + id + " :"
+            print response
     return
 
 
