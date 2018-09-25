@@ -75,8 +75,8 @@ def load_config(args):
     file_locations = []
 
     for visual in config['visuals']:
-        visual['title'] = visual['title'] + " " + visual['env']
-        visual['id'] = visual['id'].lower() + "_" + visual['env'].lower()
+        visual['title'] = visual['title']
+        visual['id'] = visual['id'].lower()
         file_locations.append(create_bundle_conf_file(args, visual, tmp_dir))
         # if validateQuery(visual, fetchClusterName(args.dcos_cluster_name)):
         #

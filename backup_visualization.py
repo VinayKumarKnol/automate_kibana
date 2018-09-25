@@ -34,7 +34,7 @@ def modifyBackupTemplate(args):
     jinjaEnv_conf = jinja2.Environment(loader=templateFilePath_conf,
                                        trim_blocks=True,
                                        lstrip_blocks=True)
-    jTemplate_conf = jinjaEnv_conf.get_template(filename_conf).render(env=args.cluster_env)
+    jTemplate_conf = jinjaEnv_conf.get_template(filename_conf).render(env=args.modify_env)
     outFile_conf = open(tmp_dir + '/' + file_name, 'w')
     outFile_conf.write(jTemplate_conf)
     outFile_conf.close()
@@ -43,7 +43,10 @@ def modifyBackupTemplate(args):
 def getAllTheVisualizations(args):
     elk_url = fetchElasticURL(args.dcos_cluster_url) + \
               "_search?pretty&&size=" + total_visualizations
-    search_result = requests.get(elk_url, json=json.loads(query_json)).json()
+    search_result = requests \
+        .get(elk_url,
+             json=json.loads(query_json.substitute(backup_env=args.backup_env))) \
+        .json()
     visuals_jsons = search_result['hits']['hits']
     visual_ids = []
     for visual in visuals_jsons:
@@ -57,7 +60,7 @@ def loadVisualizationJSON(args, visual_index):
     blue_replace = re.compile(re.escape('blue'), re.IGNORECASE)
     visual_url = elk_url + visual_index
     visual_json = requests.get(visual_url).json()
-    visual_id = re.sub(r'\W+', '_', visual_json['_source']['title']).lower()
+    visual_id = re.sub(r'\W+', '_', visual_json['_source']['title']).lower().rstrip('_')
     return yaml_template.substitute(
         id=blue_replace.sub('{{ env }}', visual_id),
         title=blue_replace.sub('{{ env }}', visual_json['_source']['title']),
@@ -105,8 +108,10 @@ def parseArgs():
                         help='Cluster where these visualisations are needed')
     parser.add_argument('-b', '--backup_file', type=str, required=True,
                         help='Name of backup file  in YAML')
-    parser.add_argument('-e', '--cluster_env', type=str, required=True,
-                        help='Environment for visualisation')
+    parser.add_argument('-e', '--backup_env', type=str, required=True,
+                        help='Visualisation environment to take backup of')
+    parser.add_argument('-m', '--modify_env', type=str, required=True,
+                        help='Visualisation environment to take backup of')
     args = parser.parse_args()
     return args
 
@@ -126,16 +131,16 @@ yaml_template = Template('''
     searchSourceJSON: '$searchSourceJSON'
     ''')
 
-query_json = '''
+query_json = Template('''
 {            
   "query" : {
     "multi_match" : {
-      "query": "blue",
+      "query": "$backup_env",
       "fields": ["title", "query"]
      }
   }
 }
-'''
+''')
 
 args = parseArgs()
 if __name__ == '__main__':
