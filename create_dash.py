@@ -23,9 +23,10 @@ def main(args):
                   "dashboard/" + id
         with open(tmp_dir + '/' + dashboard, 'r') as json_file:
             payload = json.load(json_file)
-            response = json.loads(requests.put(elk_url, json=payload).content)
-            print ">>status of dashboard: " + id + " :"
-            print response
+            print payload
+            # response = json.loads(requests.put(elk_url, json=payload).content)
+            # print ">>status of dashboard: " + id + " :"
+            # print response
     return
 
 
@@ -44,7 +45,8 @@ def load_config(args):
     # print args.config
 
     with open(args.config) as config:
-        config = yaml.load(config)
+        env_config = jinja2.Template(config.read()).render(env=args.environment)
+        config = yaml.load(env_config)
     tmp_dir = "tmp-dashboard-config-dir"
     if not os.path.exists(tmp_dir):
         os.makedirs(tmp_dir)
@@ -62,6 +64,9 @@ def parseArgs():
                         help='dcos cluster where dashboards are needed.')
     parser.add_argument('-tc', '--template_conf', type=str, required=True,
                         help='Jinja2 template file for config')
+    parser.add_argument('-e', '--environment', type=str, required=True,
+                        help='environment to make dashboard for.')
+
     args = parser.parse_args()
     print args
     return args
@@ -69,7 +74,7 @@ def parseArgs():
 
 def create_dash_configs(args, dashboard, tmp_dir):
     # print dashboard
-    file_name = dashboard['id'] + "-dashboard.json"
+    file_name = dashboard['id'] + "_dashboard.json"
     path_conf, filename_conf = os.path.split(args.template_conf)
     templateFilePath_conf = jinja2.FileSystemLoader(path_conf or './')
     jinjaEnv_conf = jinja2.Environment(loader=templateFilePath_conf, trim_blocks=True,

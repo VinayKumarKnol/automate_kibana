@@ -1,13 +1,16 @@
 dashboard:
   -  id: cluster_memory
-     title: Cluster & Memory Dashboard
-     env: [red, blue]
+     title: Cluster & Memory Dashboard {{ env }}
      visualIds:
        -
          id: cpu_load_average_{{ env }}
          index: 1
+         row: 1
+         col: 1
          delim: ','
        -
          id: jvm_mem_used_{{ env }}
          index: 2
+         row: 1
+         col: 7
          delim: ''
