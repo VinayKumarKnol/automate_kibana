@@ -68,8 +68,8 @@ def fetchClusterName(dcos_cluster_name):
 
 
 def create_bundle_conf_file(args, config, tmp_dir):
-    # creates the visual json from meta data
-    # config: contains the meta data of visual
+    # creates the visual json from meta data.
+    # config: contains the meta data of visual.
     # tmp_dir: directory where we want to put the visual json.
     # file_name: contains the name of visualizations json.
     # path_conf: contains the directory where we have the template file stored.
@@ -77,7 +77,7 @@ def create_bundle_conf_file(args, config, tmp_dir):
     # templateFilePath_conf: A File System Loader.
     # jinjaEnv_conf: Environment config'd with loader.
     # jTemplate_conf: contains the env specific meta data.
-    # outputFile_conf: contins the json file where we are writing the env specific
+    # outputFile_conf: contains the json file where we are writing the env specific
     #                  visual json.
     # returns: visual_id , file_name.
     file_name = config['id'] + "-visualization.json"

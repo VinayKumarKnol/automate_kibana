@@ -7,7 +7,19 @@ import requests
 import json
 
 
+# puts dashboards on kibana by reading from meta data.
+# global vars:
+# args: contain command line arguments.
+
 def main(args):
+    # vars used:
+    # dcos_elk_url: contains elastic search url of a given env.
+    # dashboard_jsons: contains the json of dashboards (List).
+    # tmp_dir: contains the directory where the files are stored.
+    # id: contains the dashboard id.
+    # dashboard: name of the dashboard json file.
+    # payload: contains the actual json we need to put over kibana.
+    # response: contains the response after PUT our dashboard to kibana.
     elk_url = fetchClusterName(args.dcos_cluster_name)
 
     if elk_url is None:
@@ -31,6 +43,7 @@ def main(args):
 
 
 def fetchClusterName(dcos_cluster_name):
+    # gets the name of the elastic search cluster.
     if "rigel" in dcos_cluster_name:
         return "http://monit-es-rigel.storefrontremote.com/.kibana/"
     elif "saturn" in dcos_cluster_name:
@@ -42,8 +55,13 @@ def fetchClusterName(dcos_cluster_name):
 
 
 def load_config(args):
-    # print args.config
-
+    # loads the meta data and creates list of visuals to load.
+    # config: contains the dashboard config file.
+    # env_config: contains the env specific meta data.
+    # config: yaml dumped env_config.
+    # tmp_dir: directory where all the dashboards are stored.
+    # file_location: A list of dashboards to load over kibana.
+    # returns: location of files and directory where the files are stored.
     with open(args.config) as config:
         env_config = jinja2.Template(config.read()).render(env=args.environment)
         config = yaml.load(env_config)
@@ -73,7 +91,18 @@ def parseArgs():
 
 
 def create_dash_configs(args, dashboard, tmp_dir):
-    # print dashboard
+    # creates the dashboard json from meta data
+    # dashboard: contains the meta data of dashboard.
+    # tmp_dir: directory where we want to put the dashboard json.
+    # file_name: contains the name of dashboard json.
+    # path_conf: contains the directory where we have the template file stored.
+    # filename_conf: contains the meta data file name.
+    # templateFilePath_conf: A File System Loader.
+    # jinjaEnv_conf: Environment config'd with loader.
+    # jTemplate_conf: contains the env specific meta data.
+    # outputFile_conf: contains the json file where we are writing the env specific
+    #                  visual json.
+    # returns: dashboard_id , file_name.
     file_name = dashboard['id'] + "_dashboard.json"
     path_conf, filename_conf = os.path.split(args.template_conf)
     templateFilePath_conf = jinja2.FileSystemLoader(path_conf or './')
