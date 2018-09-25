@@ -10,7 +10,23 @@ import re
 import time
 
 
+# creates back up of visualizations
+# global vars:
+# args: contains all the command line arguments
+# query_json: contains templatized query json to get env specific visualization.
+# yam_template: contains tamplatized meta data.
+#
+# @deprecated
+# yaml_header: only used if we are creating a file from scratch
+#
+
 def main(args):
+    # args: contain command line arguments
+    # vars used
+    # path_conf: contains the name of the directory where config is placed.
+    # filename_conf: contains the name of the config file name.
+    # backup_file:  we are using backup file to stand our visuals.
+    # id: contains the unique id associated with each visual.
     path_conf, filename_conf = os.path.split(args.backup_file)
 
     if not os.path.exists(path_conf):
@@ -25,6 +41,16 @@ def main(args):
 
 
 def modifyBackupTemplate(args):
+    # modifies the jinja Templated metafile to env specific meta file.
+    # vars used:
+    # tmp_dir  : the name of the directory to store the env specific meta file.
+    # file_name: name of the backup file (has time stamp appended).
+    # path_conf: contains the name of the directory where config is placed.
+    # filename_conf: contains the name of the config file name.
+    # templateFilePath_conf: loader to load the jinja2 template.
+    # jinjaEnv_conf: Environment configured with loader to get template.
+    # jTemplate_conf: env specific meta file is contained here.
+    # outFile_conf: the file which is written with env specific meta data.
     tmp_dir = 'config'
     file_name = ('backup_file_' +
                  time.strftime("%Y-%m-%d %H:%M:%S") +
@@ -41,6 +67,16 @@ def modifyBackupTemplate(args):
 
 
 def getAllTheVisualizations(args):
+    # we curl the .kibana index for all the visualizations
+    # elk_url: contains the query suffixed to the base url
+    #          found by fetchElasticURL(args.dcos_cluster_url)
+    # total_visualizations: contains total number visualizations to get.
+    # search_result: json content having details of the all the visualizations.
+    # query_json: a global var containing templated query which can work to get
+    #             multiple environments visualizations.
+    # visual_json: contains only the visualizations to extract id from (json)
+    # visual_id: an array of visualization ids
+
     elk_url = fetchElasticURL(args.dcos_cluster_url) + \
               "_search?pretty&&size=" + total_visualizations
     search_result = requests \
@@ -56,6 +92,15 @@ def getAllTheVisualizations(args):
 
 
 def loadVisualizationJSON(args, visual_index):
+    # here we convert the environment specific meta data to generic templated data.
+    # visual_index: contains the id of the visualization to get and convert.
+    # blue_replace: converts all occurences of blue to {{ env }}
+    # visual_url: contains the link to curl from
+    # visual_json: contains the result after we curl the visual_url.
+    # visual_id: a modified id which has title lowercased
+    #            and whitespaces converted to '_'
+    # yaml_template: contains general template of meta data which will be loaded with
+    #                visualization's data.
     elk_url = fetchElasticURL(args.dcos_cluster_url)
     blue_replace = re.compile(re.escape('blue'), re.IGNORECASE)
     visual_url = elk_url + visual_index
@@ -80,6 +125,8 @@ def loadVisualizationJSON(args, visual_index):
 
 
 def fetchElasticURL(dcos_cluster_url):
+    # fetches Elasticsearch url for each environment.
+    # dcos_cluster_url: contains the dcos cluster we are working on.
     if "rigel" in dcos_cluster_url:
         return "http://monit-es-rigel.storefrontremote.com/.kibana/visualization/"
     elif "saturn" in dcos_cluster_url:
