@@ -7,7 +7,22 @@ import yaml
 import requests
 
 
+# creates visualizations over kibana by reading meta data file.
+# global vars:
+# args: contains command line arguments.
+# @deprecated:
+# validateQuery(): not using it currently.
+
 def main(args):
+    # vars used:
+    # dcos_elk_url: contains elastic search url of a given env.
+    # visual_json: contains the json of visualizations (List).
+    # tmp_dir: contains the directory where the files are stored.
+    # id: contains the visual id.
+    # visual: name of the visual json file.
+    # payload: contains the actual json we need to put over kibana.
+    # request_result: contains the response after PUT our visual to kibana.
+
     dcos_elk_url = fetchClusterName(args.dcos_cluster_name)
 
     if dcos_elk_url is None:
@@ -39,6 +54,9 @@ def validateQuery(config, dcos_cluster):
 
 
 def fetchClusterName(dcos_cluster_name):
+    # fetches the name of the cluster
+    # dcos_cluster_name: contains the name of the cluster we are to work with
+    #                    defined through cl arguments.
     if "rigel" in dcos_cluster_name:
         return "http://monit-es-rigel.storefrontremote.com/.kibana/"
     elif "saturn" in dcos_cluster_name:
@@ -50,6 +68,18 @@ def fetchClusterName(dcos_cluster_name):
 
 
 def create_bundle_conf_file(args, config, tmp_dir):
+    # creates the visual json from meta data
+    # config: contains the meta data of visual
+    # tmp_dir: directory where we want to put the visual json.
+    # file_name: contains the name of visualizations json.
+    # path_conf: contains the directory where we have the template file stored.
+    # filename_conf: contains the meta data file name.
+    # templateFilePath_conf: A File System Loader.
+    # jinjaEnv_conf: Environment config'd with loader.
+    # jTemplate_conf: contains the env specific meta data.
+    # outputFile_conf: contins the json file where we are writing the env specific
+    #                  visual json.
+    # returns: visual_id , file_name.
     file_name = config['id'] + "-visualization.json"
     path_conf, filename_conf = os.path.split(args.template_conf)
     templateFilePath_conf = jinja2.FileSystemLoader(path_conf or './')
@@ -65,6 +95,12 @@ def create_bundle_conf_file(args, config, tmp_dir):
 
 
 def load_config(args):
+    # loads the meta data and creates list of visuals to load.
+    # config: contains the visual config file.
+    # tmp_dir: contains the directory to store the visuals.
+    # file_locations: a List of visual jsons to load.
+    # returns: file locations and directory where all the visuals are stored.
+
     with open(args.config) as config:
         config = yaml.load(config)
 
