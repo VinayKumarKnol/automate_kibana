@@ -1,0 +1,10 @@
+{
+  "title": "StoreServ Lagom Cassandra Read Times - blue",
+  "visState": "{\"title\":\"StoreServ Lagom Cassandra Read Times - blue\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=cinnamon-metrics-*, q='application:\\\"storeserv-lagom-blue\\\" AND metric:systems.*ReadCassandraTimeRecorderMillis', split=metric:15, metric=avg:p95).label(\\\"$1\\\", \\\"^.* > metric:systems.(\\\\S+)ReadCassandraTimeRecorderMillis > .*\\\").yaxis(label=\\\"p95 millis\\\")\",\"interval\":\"auto\",\"type\":\"timelion\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}

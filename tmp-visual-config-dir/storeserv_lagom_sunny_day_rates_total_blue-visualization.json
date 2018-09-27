@@ -1,0 +1,10 @@
+{
+  "title": "StoreServ Lagom Sunny Day Rates Total blue(blue)",
+  "visState": "{\"title\":\"StoreServ Lagom Sunny Day Rates Total blue\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=cinnamon-metrics-*, q='application:storeserv-lagom-blue AND metric:systems.sunnyDay*', split=metric:15, metric=avg:m1_rate).multiply(.es(index=cinnamon-metrics-*, metric=cardinality:host)).label(\\\"$1\\\", \\\"^.* > metric:systems.sunnyDay(\\\\S+)Rate > .*\\\")\",\"interval\":\"auto\",\"type\":\"timelion\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}

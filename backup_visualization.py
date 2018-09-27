@@ -94,7 +94,7 @@ def getAllTheVisualizations(args):
 def loadVisualizationJSON(args, visual_index):
     # here we convert the environment specific meta data to generic templated data.
     # visual_index: contains the id of the visualization to get and convert.
-    # blue_replace: converts all occurences of blue to {{ env }}
+    # env_replace: converts all occurences of backup_env to {{ env }}
     # visual_url: contains the link to curl from
     # visual_json: contains the result after we curl the visual_url.
     # visual_id: a modified id which has title lowercased
@@ -102,21 +102,21 @@ def loadVisualizationJSON(args, visual_index):
     # yaml_template: contains general template of meta data which will be loaded with
     #                visualization's data.
     elk_url = fetchElasticURL(args.dcos_cluster_url)
-    blue_replace = re.compile(re.escape('blue'), re.IGNORECASE)
+    env_replace = re.compile(re.escape(args.backup_env), re.IGNORECASE)
     visual_url = elk_url + visual_index
     visual_json = requests.get(visual_url).json()
     visual_id = re.sub(r'\W+', '_', visual_json['_source']['title']).lower().rstrip('_')
     return yaml_template.substitute(
-        id=blue_replace.sub('{{ env }}', visual_id),
-        title=blue_replace.sub('{{ env }}', visual_json['_source']['title']),
+        id=env_replace.sub('{{ env }}', visual_id),
+        title=env_replace.sub('{{ env }}', visual_json['_source']['title']),
         env='{{ env }}',
-        visState=json.dumps(blue_replace.
+        visState=json.dumps(env_replace.
                             sub('{{ env }}', visual_json['_source']['visState'])
-                            ).strip('"'),
-        uiStateJSON=json.dumps(blue_replace.sub('{{ env }}',
+                            ).strip('"').replace("'", "''"),
+        uiStateJSON=json.dumps(env_replace.sub('{{ env }}',
                                                 visual_json['_source']['uiStateJSON'])
                                ).strip('"'),
-        searchSourceJSON=json.dumps(blue_replace.sub('{{ env }}', visual_json['_source']
+        searchSourceJSON=json.dumps(env_replace.sub('{{ env }}', visual_json['_source']
         ['kibanaSavedObjectMeta']
         ['searchSourceJSON'])
                                     )
@@ -163,7 +163,7 @@ def parseArgs():
     return args
 
 
-total_visualizations = '1'
+total_visualizations = '100'
 yaml_header = '''
 ---
 visuals:
