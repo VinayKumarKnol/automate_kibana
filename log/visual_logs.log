@@ -1,0 +1,16 @@
+2018-09-27 15:22:10 : storeserv_lagom_blue_table_of_contents{"created: "False""result" : "updated" }
+2018-09-27 15:22:11 : storeserv_lagom_blue_file_write_to_cassandra_time{"created: "False""result" : "updated" }
+2018-09-27 15:22:13 : storeserv_lagom_blue_file_read_from_cassandra_time{"created: "False""result" : "updated" }
+2018-09-27 15:22:14 : storeserv_lagom_blue_cassandra_processed_data_read_times{"created: "False""result" : "updated" }
+2018-09-27 15:22:15 : storeserv_lagom_blue_cassandra_processed_data_write_times{"created: "False""result" : "updated" }
+2018-09-27 15:22:18 : systemfilesactor_state_write_to_cassandra_time_blue{"created: "False""result" : "updated" }
+2018-09-27 15:22:19 : systemfilesactor_state_read_from_cassandra_time_blue{"created: "False""result" : "updated" }
+2018-09-27 15:22:21 : storeserv_lagom_cassandra_read_times_blue{"created: "False""result" : "updated" }
+2018-09-27 15:22:38 : storeserv_lagom_blue_table_of_contents{"created: "False""result" : "updated" }
+2018-09-27 15:22:39 : storeserv_lagom_blue_file_write_to_cassandra_time{"created: "False""result" : "updated" }
+2018-09-27 15:22:41 : storeserv_lagom_blue_file_read_from_cassandra_time{"created: "False""result" : "updated" }
+2018-09-27 15:22:42 : storeserv_lagom_blue_cassandra_processed_data_read_times{"created: "False""result" : "updated" }
+2018-09-27 15:22:44 : storeserv_lagom_blue_cassandra_processed_data_write_times{"created: "False""result" : "updated" }
+2018-09-27 15:22:45 : systemfilesactor_state_write_to_cassandra_time_blue{"created: "False""result" : "updated" }
+2018-09-27 15:22:46 : systemfilesactor_state_read_from_cassandra_time_blue{"created: "False""result" : "updated" }
+2018-09-27 15:22:48 : storeserv_lagom_cassandra_read_times_blue{"created: "False""result" : "updated" }
