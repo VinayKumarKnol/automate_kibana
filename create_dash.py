@@ -5,6 +5,7 @@ import jinja2
 import yaml
 import requests
 import json
+import time
 
 
 # puts dashboards on kibana by reading from meta data.
@@ -26,6 +27,11 @@ def main(args):
         print(">>Invalid DCOS Cluster url")
         return
 
+    log_file_location = 'log/dashboard_logs.log'
+    log_file_dir, _ = os.path.split(log_file_location)
+    if not os.path.exists(log_file_dir):
+        os.makedirs(log_file_dir)
+
     dashboard_jsons, tmp_dir = load_config(args)
     if len(dashboard_jsons) is 0:
         print ">>There are no dashboards to put on kibana."
@@ -39,6 +45,7 @@ def main(args):
             response = json.loads(requests.put(elk_url, json=payload).content)
             print ">>status of dashboard: " + id + " :"
             print response
+            logStatus(id, response, log_file_location)
     return
 
 
@@ -52,6 +59,14 @@ def fetchClusterName(dcos_cluster_name):
         return "neptune"
     elif "jupiter" in dcos_cluster_name:
         return "jupiter"
+
+def logStatus(dashboard_id, response, log_file_location):
+    with open(log_file_location, 'a') as log_file:
+        message = time.strftime("%Y-%m-%d %H:%M:%S") + \
+        ' : ' + dashboard_id + '{"created: "' + str(response['created']) + \
+        '"' + '"result" : "' + str(response['result']) + '" }'
+        log_file.write(message + '\n')
+
 
 
 def load_config(args):

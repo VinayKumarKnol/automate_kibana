@@ -32,7 +32,7 @@ def main(args):
 
     log_file_location = 'log/visual_logs.log'
     log_file_dir, _ = os.path.split(log_file_location)
-    if not os.path.exists(log_file_location):
+    if not os.path.exists(log_file_dir):
         os.makedirs(log_file_dir)
 
     visuals_json, tmp_dir = load_config(args)
