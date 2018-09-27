@@ -53,6 +53,11 @@ def main(args):
 
 
 def logStatus(visual_id, response, log_file_location):
+    #logs the output to put request we have thrown over kibana
+    # visual_id: contains the visual_id of the visualisation.
+    # response: json which contains the result of the request we have made.
+    # log_file_location: represents the location of the log file.
+
     with open(log_file_location, 'a') as log_file:
         message = time.strftime("%Y-%m-%d %H:%M:%S") + \
         ' : ' + visual_id + '{"created: "' + str(response['created']) + \

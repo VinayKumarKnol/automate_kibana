@@ -61,6 +61,11 @@ def fetchClusterName(dcos_cluster_name):
         return "jupiter"
 
 def logStatus(dashboard_id, response, log_file_location):
+    # logs the output to put request we have thrown over kibana
+    # dashboard_id: contains the dashboard_id of the dashboard.
+    # response: json which contains the result of the request we have made.
+    # log_file_location: represents the location of the log file.
+
     with open(log_file_location, 'a') as log_file:
         message = time.strftime("%Y-%m-%d %H:%M:%S") + \
         ' : ' + dashboard_id + '{"created: "' + str(response['created']) + \
@@ -70,7 +75,7 @@ def logStatus(dashboard_id, response, log_file_location):
 
 
 def load_config(args):
-    # loads the meta data and creates list of visuals to load.
+    # loads the meta data and creates list of dashboards to load.
     # config: contains the dashboard config file.
     # env_config: contains the env specific meta data.
     # config: yaml dumped env_config.
@@ -116,7 +121,7 @@ def create_dash_configs(args, dashboard, tmp_dir):
     # jinjaEnv_conf: Environment config'd with loader.
     # jTemplate_conf: contains the env specific meta data.
     # outputFile_conf: contains the json file where we are writing the env specific
-    #                  visual json.
+    #                  dashboard json.
     # returns: dashboard_id , file_name.
     file_name = dashboard['id'] + "_dashboard.json"
     path_conf, filename_conf = os.path.split(args.template_conf)
