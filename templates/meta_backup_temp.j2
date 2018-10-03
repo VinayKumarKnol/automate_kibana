@@ -35,14 +35,6 @@ visuals:
     searchSourceJSON: '{\"filter\":[],\"index\":\"AWXRm_W-3RS3G0MlMYMQ\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"appname:\\\"storeserv-lagom\\\" AND environment:\\\"{{ env }}\\\" AND event-type:\\\"Split brain resolver event\\\"\"}},\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"highlightAll\":true,\"version\":true}'
     
   -
-    id: storeserv_lagom_sunny_day_rates_total_{{ env }}_{{ env }}
-    title: StoreServ Lagom Sunny Day Rates Total {{ env }}({{ env }})
-    env: {{ env }}
-    visState: '{\"title\":\"StoreServ Lagom Sunny Day Rates Total {{ env }}\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=cinnamon-metrics-*, q=''application:storeserv-lagom-{{ env }} AND metric:systems.sunnyDay*'', split=metric:15, metric=avg:m1_rate).multiply(.es(index=cinnamon-metrics-*, metric=cardinality:host)).label(\\\"$1\\\", \\\"^.* > metric:systems.sunnyDay(\\\\S+)Rate > .*\\\")\",\"interval\":\"auto\",\"type\":\"timelion\"},\"aggs\":[],\"listeners\":{}}'
-    uiStateJSON: '{}'
-    searchSourceJSON: '{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}'
-    
-  -
     id: avg_file_immigration_age_{{ env }}
     title: Avg file immigration age {{ env }}
     env: {{ env }}
@@ -507,14 +499,6 @@ visuals:
     searchSourceJSON: '{\"index\":\"AWXRlwxf3RS3G0MlMJRM\",\"query\":{\"match_all\":{}},\"filter\":[{\"meta\":{\"index\":\"cinnamon-metrics-*\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"application\",\"value\":\"storeserv-lagom-{{ env }}\"},\"query\":{\"match\":{\"application\":{\"query\":\"storeserv-lagom-{{ env }}\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"cinnamon-metrics-*\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"metric\",\"value\":\"self-nodes.reachable-nodes\"},\"query\":{\"match\":{\"metric\":{\"query\":\"self-nodes.reachable-nodes\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}'
     
   -
-    id: storeserv_lagom_cassandra_read_times_{{ env }}
-    title: StoreServ Lagom Cassandra Read Times - {{ env }}
-    env: {{ env }}
-    visState: '{\"title\":\"StoreServ Lagom Cassandra Read Times - {{ env }}\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=cinnamon-metrics-*, q=''application:\\\"storeserv-lagom-{{ env }}\\\" AND metric:systems.*ReadCassandraTimeRecorderMillis'', split=metric:15, metric=avg:p95).label(\\\"$1\\\", \\\"^.* > metric:systems.(\\\\S+)ReadCassandraTimeRecorderMillis > .*\\\").yaxis(label=\\\"p95 millis\\\")\",\"interval\":\"auto\",\"type\":\"timelion\"},\"aggs\":[],\"listeners\":{}}'
-    uiStateJSON: '{}'
-    searchSourceJSON: '{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}'
-    
-  -
     id: storeserv_lagom_{{ env }}_table_of_contents
     title: StoreServ Lagom {{ env }} Table of Contents
     env: {{ env }}
@@ -523,12 +507,12 @@ visuals:
     searchSourceJSON: '{\"query\":{\"match_all\":{}},\"filter\":[]}'
     
   -
-    id: storeserv_lagom_{{ env }}_table_of_contents
-    title: StoreServ Lagom {{ env }} Table of Contents
+    id: systemfilesactor_state_write_to_cassandra_time_{{ env }}
+    title: SystemFilesActor State Write To Cassandra Time {{ env }}
     env: {{ env }}
-    visState: '{\"title\":\"StoreServ Lagom {{ env }} Table of Contents\",\"type\":\"markdown\",\"params\":{\"markdown\":\"# StoreServ Lagom {{ env }}\\n[Speeds And Feeds](/service/kibana/app/kibana#/dashboard/AWPyxNKsgsKdGCJ0lG95)\\n\\n[Processing Rates](/service/kibana/app/kibana#/dashboard/AWPzikfac4NZeeLJb6dx)\\n\\n[JVM Metrics](/service/kibana/app/kibana#/dashboard/AWPzjGWdc4NZeeLJb6d0)\\n\\n[Actor Metrics](/service/kibana/app/kibana#/dashboard/AWP0T2R8gsKdGCJ0lG-U)\\n\\n[Dispatcher Metrics](/service/kibana/app/kibana#/dashboard/AWEea0MKgsJN7hbImm3H)\\n\\n[Serialization Time Metrics](/service/kibana/app/kibana#/dashboard/AWPz0mrXgsKdGCJ0lG-S)\\n\\n[Cassandra Time Metrics](/service/kibana/app/kibana#/dashboard/AWPz6XMhc4NZeeLJb6eJ)\\n\\n[SystemFilesActor Metrics](/service/kibana/app/kibana#/dashboard/AWPzgrZPc4NZeeLJb6ds)\\n\\n[Consumer Lag Metrics](/service/kibana/app/kibana#/dashboard/AWP0aIPHgsKdGCJ0lG-Z)\\n\\n[Cluster Health](/service/kibana/app/kibana#/dashboard/AWVmWb5zrypEwhTurnOe)\",\"type\":\"markdown\"},\"aggs\":[],\"listeners\":{}}'
+    visState: '{\"title\":\"SystemFilesActor State Write To Cassandra Time {{ env }}\",\"type\":\"line\",\"params\":{\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{\"text\":\"@timestamp per minute\"}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Average mean\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"line\",\"mode\":\"normal\",\"data\":{\"label\":\"Average\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true},{\"show\":true,\"mode\":\"normal\",\"type\":\"line\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"data\":{\"id\":\"4\",\"label\":\"95%\"},\"valueAxis\":\"ValueAxis-1\"}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false,\"type\":\"line\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"mean\",\"customLabel\":\"Average\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"host\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"p95\",\"customLabel\":\"95%\"}}],\"listeners\":{}}'
     uiStateJSON: '{}'
-    searchSourceJSON: '{\"query\":{\"match_all\":{}},\"filter\":[]}'
+    searchSourceJSON: '{\"filter\":[{\"meta\":{\"index\":\"cinnamon-metrics-*\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"application\",\"value\":\"storeserv-lagom-{{ env }}\"},\"query\":{\"match\":{\"application\":{\"query\":\"storeserv-lagom-{{ env }}\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"index\":\"AWXRlwxf3RS3G0MlMJRM\",\"highlightAll\":true,\"version\":true,\"query\":{\"query_string\":{\"query\":\"metric:\\\"systems.SystemFilesActorStateWriteCassandraTimeRecorderMillis\\\"\",\"analyze_wildcard\":true}}}'
     
   -
     id: systemfilesactor_state_read_from_cassandra_time_{{ env }}
@@ -539,12 +523,12 @@ visuals:
     searchSourceJSON: '{\"filter\":[{\"meta\":{\"index\":\"cinnamon-metrics-*\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"application\",\"value\":\"storeserv-lagom-{{ env }}\"},\"query\":{\"match\":{\"application\":{\"query\":\"storeserv-lagom-{{ env }}\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"index\":\"AWXRlwxf3RS3G0MlMJRM\",\"highlightAll\":true,\"version\":true,\"query\":{\"query_string\":{\"query\":\"metric:\\\"systems.SystemFilesActorStateReadCassandraTimeRecorderMillis\\\"\",\"analyze_wildcard\":true}}}'
     
   -
-    id: systemfilesactor_state_write_to_cassandra_time_{{ env }}
-    title: SystemFilesActor State Write To Cassandra Time {{ env }}
+    id: storeserv_lagom_cassandra_read_times_{{ env }}
+    title: StoreServ Lagom Cassandra Read Times - {{ env }}
     env: {{ env }}
-    visState: '{\"title\":\"SystemFilesActor State Write To Cassandra Time {{ env }}\",\"type\":\"line\",\"params\":{\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{\"text\":\"@timestamp per minute\"}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Average mean\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"line\",\"mode\":\"normal\",\"data\":{\"label\":\"Average\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true},{\"show\":true,\"mode\":\"normal\",\"type\":\"line\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"data\":{\"id\":\"4\",\"label\":\"95%\"},\"valueAxis\":\"ValueAxis-1\"}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false,\"type\":\"line\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"mean\",\"customLabel\":\"Average\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"host\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"p95\",\"customLabel\":\"95%\"}}],\"listeners\":{}}'
+    visState: '{\"title\":\"StoreServ Lagom Cassandra Read Times - {{ env }}\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=cinnamon-metrics-*, q=''application:\\\"storeserv-lagom-{{ env }}\\\" AND metric:systems.*ReadCassandraTimeRecorderMillis'', split=metric:15, metric=avg:p95).label(\\\"$1\\\", \\\"^.* > metric:systems.(\\\\S+)ReadCassandraTimeRecorderMillis > .*\\\").yaxis(label=\\\"p95 millis\\\")\",\"interval\":\"auto\",\"type\":\"timelion\"},\"aggs\":[],\"listeners\":{}}'
     uiStateJSON: '{}'
-    searchSourceJSON: '{\"filter\":[{\"meta\":{\"index\":\"cinnamon-metrics-*\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"application\",\"value\":\"storeserv-lagom-{{ env }}\"},\"query\":{\"match\":{\"application\":{\"query\":\"storeserv-lagom-{{ env }}\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"index\":\"AWXRlwxf3RS3G0MlMJRM\",\"highlightAll\":true,\"version\":true,\"query\":{\"query_string\":{\"query\":\"metric:\\\"systems.SystemFilesActorStateWriteCassandraTimeRecorderMillis\\\"\",\"analyze_wildcard\":true}}}'
+    searchSourceJSON: '{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}'
     
   -
     id: storeserv_lagom_files_completely_processed_all_nodes_{{ env }}
