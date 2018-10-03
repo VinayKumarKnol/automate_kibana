@@ -6,6 +6,7 @@ import yaml
 import requests
 import json
 import time
+import traceback
 
 
 # puts dashboards on kibana by reading from meta data.
@@ -40,12 +41,16 @@ def main(args):
         elk_url = elk_url + \
                   "dashboard/" + id
         with open(tmp_dir + '/' + dashboard, 'r') as json_file:
-            payload = json.load(json_file)
-            print payload
-            response = json.loads(requests.put(elk_url, json=payload).content)
-            print ">>status of dashboard: " + id + " :"
-            print response
-            logStatus(id, response, log_file_location)
+            try:
+                payload = json.load(json_file)
+                print payload
+                response = json.loads(requests.put(elk_url, json=payload).content)
+                print ">>status of dashboard: " + id + " :"
+                print response
+                logStatus(id, response, log_file_location)
+            except:
+                logStatus(id, traceback.format_exc(), log_file_location)
+                continue
     return
 
 

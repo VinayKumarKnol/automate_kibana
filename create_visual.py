@@ -53,6 +53,7 @@ def main(args):
                 logStatus(id, request_result, log_file_location)
             except:
                 logStatus(id, traceback.format_exc(), log_file_location)
+                continue
     return
 
 
