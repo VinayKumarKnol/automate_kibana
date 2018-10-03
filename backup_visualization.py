@@ -2,7 +2,6 @@
 import argparse
 import json
 import requests
-import yaml
 import os
 import jinja2
 from string import Template
