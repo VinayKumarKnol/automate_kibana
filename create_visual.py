@@ -6,6 +6,7 @@ import jinja2
 import yaml
 import requests
 import time
+import traceback
 
 
 # creates visualizations over kibana by reading meta data file.
@@ -44,25 +45,28 @@ def main(args):
         elk_url = dcos_elk_url + "visualization/" + id
         print elk_url
         with open(tmp_dir + '/' + visual, 'r') as json_file:
-            payload = json.load(json_file)
-            request_result = json.loads(requests.put(elk_url, json=payload).content)
-            print ">>status of visualisation: " + id + " :"
-            print request_result
-            logStatus(id, request_result, log_file_location)
+            try:
+                payload = json.load(json_file)
+                request_result = json.loads(requests.put(elk_url, json=payload).content)
+                print ">>status of visualisation: " + id + " :"
+                print request_result
+                logStatus(id, request_result, log_file_location)
+            except:
+                logStatus(id, traceback.format_exc(), log_file_location)
     return
 
 
 def logStatus(visual_id, response, log_file_location):
-    #logs the output to put request we have thrown over kibana
+    # logs the output to put request we have thrown over kibana
     # visual_id: contains the visual_id of the visualisation.
     # response: json which contains the result of the request we have made.
     # log_file_location: represents the location of the log file.
 
     with open(log_file_location, 'a') as log_file:
         message = time.strftime("%Y-%m-%d %H:%M:%S") + \
-        ' : ' + visual_id + '{"created: "' + str(response['created']) + \
-        '"' + '"result" : "' + str(response['result']) + '" }'
+                  ' : ' + visual_id + ' : ' + response
         log_file.write(message + '\n')
+
 
 def validateQuery(config, dcos_cluster):
     query_url = dcos_cluster + '_doc/_validate/query?'
