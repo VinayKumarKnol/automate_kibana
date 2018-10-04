@@ -25,7 +25,10 @@ def main(args):
     # log_file_location: contains the location of log file.
     # payload: contains the actual json we need to put over kibana.
     # request_result: contains the response after PUT our visual to kibana.
-
+    # exit_status: contains the script end status.
+    # Where 0 means success and 1 means error.
+    exit_status = 0
+    failed_ids = []
     dcos_elk_url = fetchClusterName(args.dcos_cluster_name)
     if dcos_elk_url is None:
         print(">>Invalid DCOS Cluster url")
@@ -52,9 +55,18 @@ def main(args):
                 print request_result
                 logStatus(id, request_result, log_file_location)
             except:
+                exit_status += 1
+                failed_ids.append(id)
                 logStatus(id, traceback.format_exc(), log_file_location)
-                continue
-    return
+    if exit_status is not 0:
+        print '>>Following Ids FAILED:'
+        print '========================'
+        for id in failed_ids:
+            print id
+        print '========================'
+        exit("There's error while processing your meta-data and jsons. Check logs.")
+    else:
+        exit(0)
 
 
 def logStatus(visual_id, response, log_file_location):
