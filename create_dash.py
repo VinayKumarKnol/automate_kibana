@@ -22,6 +22,8 @@ def main(args):
     # dashboard: name of the dashboard json file.
     # payload: contains the actual json we need to put over kibana.
     # response: contains the response after PUT our dashboard to kibana.
+    exit_status = 0
+    failed_ids = []
     elk_url = fetchClusterName(args.dcos_cluster_name)
 
     if elk_url is None:
@@ -49,9 +51,19 @@ def main(args):
                 print response
                 logStatus(id, response, log_file_location)
             except:
+                exit_status += 1
+                failed_ids.append(id)
                 logStatus(id, traceback.format_exc(), log_file_location)
-                continue
-    return
+
+    if exit_status is not 0:
+        print '>>Following Ids FAILED:'
+        print '========================'
+        for id in failed_ids:
+            print id
+        print '========================'
+        exit("There's error while processing your meta-data and jsons. Check logs.")
+    else:
+        exit(0)
 
 
 def fetchClusterName(dcos_cluster_name):
@@ -65,6 +77,7 @@ def fetchClusterName(dcos_cluster_name):
     elif "jupiter" in dcos_cluster_name:
         return "jupiter"
 
+
 def logStatus(dashboard_id, response, log_file_location):
     # logs the output to put request we have thrown over kibana
     # dashboard_id: contains the dashboard_id of the dashboard.
@@ -73,10 +86,9 @@ def logStatus(dashboard_id, response, log_file_location):
 
     with open(log_file_location, 'a') as log_file:
         message = time.strftime("%Y-%m-%d %H:%M:%S") + \
-        ' : ' + dashboard_id + '{"created: "' + str(response['created']) + \
-        '"' + '"result" : "' + str(response['result']) + '" }'
+                  ' : ' + dashboard_id + '{"created: "' + str(response['created']) + \
+                  '"' + ' "result" : "' + str(response['result']) + '" }'
         log_file.write(message + '\n')
-
 
 
 def load_config(args):
