@@ -86,8 +86,7 @@ def logStatus(dashboard_id, response, log_file_location):
 
     with open(log_file_location, 'a') as log_file:
         message = time.strftime("%Y-%m-%d %H:%M:%S") + \
-                  ' : ' + dashboard_id + '{"created: "' + str(response['created']) + \
-                  '"' + ' "result" : "' + str(response['result']) + '" }'
+                  ' : ' + dashboard_id + ' : ' + response
         log_file.write(message + '\n')
 
 
