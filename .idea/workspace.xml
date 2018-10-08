@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="eb9c4660-a173-4c8f-987b-17f804a468e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/visual_logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/visual_logs.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/backup_visualization.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/backup_visualization.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/create_dash.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/create_dash.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/create_visual.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/create_visual.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +32,7 @@
           <entry key="Python Console" value="517" />
           <entry key="gitignore" value="33" />
           <entry key="json" value="10" />
-          <entry key="md" value="1829" />
+          <entry key="md" value="3252" />
           <entry key="py" value="9764" />
           <entry key="yaml" value="681" />
         </counts>
@@ -38,7 +40,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="10" />
-          <entry key="Markdown" value="1829" />
+          <entry key="Markdown" value="3252" />
           <entry key="PLAIN_TEXT" value="33" />
           <entry key="Python" value="10281" />
           <entry key="YAML" value="681" />
@@ -53,30 +55,39 @@
           <entry key="gitignore" value="1" />
           <entry key="json" value="13" />
           <entry key="log" value="4" />
-          <entry key="md" value="4" />
+          <entry key="md" value="8" />
           <entry key="py" value="15" />
-          <entry key="yaml" value="55" />
+          <entry key="yaml" value="56" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="13" />
-          <entry key="Markdown" value="4" />
+          <entry key="Markdown" value="8" />
           <entry key="PLAIN_TEXT" value="8" />
           <entry key="Python" value="15" />
-          <entry key="YAML" value="56" />
+          <entry key="YAML" value="57" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/backup_file_2018-09-27_12:39:21.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="14" column="10" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/readme.md">
+        <entry file="file://$PROJECT_DIR$/docs/create_visual.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="180">
-                <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <first_editor relative-caret-position="234">
+                <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               </first_editor>
               <second_editor />
             </state>
@@ -84,10 +95,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/backup_file_2018-09-27_12:39:21.yaml">
+        <entry file="file://$PROJECT_DIR$/docs/create_dash.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="274">
+                <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/backup_visualization.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-6">
+                <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/dash_config.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10280">
-              <caret line="514" column="22" selection-start-line="514" selection-start-column="22" selection-end-line="514" selection-end-column="22" />
+            <state relative-caret-position="100">
+              <caret line="5" column="11" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -158,10 +193,10 @@
         <option value="$PROJECT_DIR$/backup_visualization.py" />
         <option value="$PROJECT_DIR$/create_visual.py" />
         <option value="$PROJECT_DIR$/create_dash.py" />
-        <option value="$PROJECT_DIR$/docs/backup_visualization.md" />
-        <option value="$PROJECT_DIR$/docs/create_visual.md" />
-        <option value="$PROJECT_DIR$/docs/create_dash.md" />
         <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/docs/backup_visualization.md" />
+        <option value="$PROJECT_DIR$/docs/create_dash.md" />
+        <option value="$PROJECT_DIR$/docs/create_visual.md" />
       </list>
     </option>
   </component>
@@ -425,13 +460,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/dash_config.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/test.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -442,18 +470,35 @@
     <entry file="file://$PROJECT_DIR$/tmp-visual-config-dir/storeserv_lagom_cassandra_read_times_blue-visualization.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="180">
+            <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/backup_file_2018-09-27_12:39:21.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10280">
-          <caret line="514" column="22" selection-start-line="514" selection-start-column="22" selection-end-line="514" selection-end-column="22" />
+        <state relative-caret-position="280">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/dash_config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/backup_visualization.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="88">
-            <caret line="21" column="12" lean-forward="true" selection-end-line="32" />
+          <first_editor relative-caret-position="-6">
+            <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
           </first_editor>
           <second_editor />
         </state>
@@ -462,8 +507,8 @@
     <entry file="file://$PROJECT_DIR$/docs/create_dash.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="168">
-            <caret line="25" column="3" lean-forward="true" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+          <first_editor relative-caret-position="274">
+            <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
           </first_editor>
           <second_editor />
         </state>
@@ -472,18 +517,8 @@
     <entry file="file://$PROJECT_DIR$/docs/create_visual.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="640">
-            <caret line="32" selection-end-line="32" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="180">
-            <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <first_editor relative-caret-position="234">
+            <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           </first_editor>
           <second_editor />
         </state>

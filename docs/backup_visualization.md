@@ -14,7 +14,7 @@ a _particular DC/OS cluster_ and belonging to a _particular environment_
 1. `-u`: used to tell the DC/OS cluster from where we are scraping we are taking out the backup.
 2. `-b`: Since we are generating metadata which we will use later so we have to tell the location of that template file in which the data retrieved will be put together to form the json of a visualisation.
  This visualisation can be used later with `create_visual.py` script.
-3. `-e`: We need to tell the name of relating to which we need our visuals from.
+3. `-e`: We need to tell the name of the environment(blue, green, beige) relating to which we need our visuals from.
 4. `-m` : We can modify the same backed up visualisations for a different environment on the fly using this option.
 example: If you want to convert blue visuals to green visuals then do this:
 ```

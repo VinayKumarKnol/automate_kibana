@@ -1,32 +1,21 @@
-**backup_visualization.py**  
-**Purpose**: This script will be used in order to take the backup of kibana visualizations present on 
-a _particular DC/OS cluster_ and belonging to a _particular environment_
+**creat_visual.py**  
+**Purpose**: This script will create visualisations on  
+a _particular DC/OS cluster_ and using the meta file given during the triggering of this script.
 
 ```
-  python backup_visualization.py \ 
- -u saturn \
-  -b templates/meta_backup_temp.j2 \
-  -e blue \
-   -m blue
+  python create_visual.py \ 
+ -c config/test.yaml \
+  -tc templates/template_visualization.j2  \
+  -u saturn
 ```   
 
 **Options Used:**
-1. `-u`: used to tell the DC/OS cluster from where we are scraping we are taking out the backup.
-2. `-b`: Since we are generating metadata which we will use later so we have to tell the location of that template file in which the data retrieved will be put together to form the json of a visualisation.
- This visualisation can be used later with `create_visual.py` script.
-3. `-e`: We need to tell the name of relating to which we need our visuals from.
-4. `-m` : We can modify the same backed up visualisations for a different environment on the fly using this option.
-example: If you want to convert blue visuals to green visuals then do this:
-```
-  python backup_visualization.py \ 
- -u saturn \
-  -b templates/meta_backup_temp.j2 \
-  -e blue \
-   -m green
-```
+1. `-c`: Used to tell the configuration to use with the script. We can also use the backed up meta data with it also.
+2. `-tc`: We have templates to generate the visualization json, we will specify the template upon which the meta data will substitute itself.
+3. `-u`: Here we tell the cluster's name, Kibana of which we are targetting.
 
-_If you do not want any changes keep -e and -m to the targeted environment._ 
 
-**Result:** Your backup file will be created with the name `backup_file_<date the script was triggered>_<time it was triggered>.yaml`
-This file has the metadata required.
+**Result:** Check the logs of this script to know the status of the visualizations.
+
+**Logs**: `logs/visual_logs.log`
 
