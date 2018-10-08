@@ -1096,3 +1096,299 @@ KeyboardInterrupt
     return getattr(self._sock,name)(*args)
 KeyboardInterrupt
 
+2018-10-04 17:35:29 : storeserv_lagom_blue_table_of_contents : Traceback (most recent call last):
+  File "create_visual.py", line 53, in main
+    request_result = json.loads(requests.put(elk_url, json=payload).content)
+  File "/usr/lib/python2.7/dist-packages/requests/api.py", line 126, in put
+    return request('put', url, data=data, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python2.7/httplib.py", line 1042, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python2.7/httplib.py", line 1082, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python2.7/httplib.py", line 1038, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python2.7/httplib.py", line 882, in _send_output
+    self.send(msg)
+  File "/usr/lib/python2.7/httplib.py", line 844, in send
+    self.connect()
+  File "/usr/lib/python2.7/dist-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python2.7/dist-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+  File "/usr/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+KeyboardInterrupt
+
+2018-10-04 17:35:30 : storeserv_lagom_blue_file_write_to_cassandra_time : Traceback (most recent call last):
+  File "create_visual.py", line 53, in main
+    request_result = json.loads(requests.put(elk_url, json=payload).content)
+  File "/usr/lib/python2.7/dist-packages/requests/api.py", line 126, in put
+    return request('put', url, data=data, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python2.7/httplib.py", line 1042, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python2.7/httplib.py", line 1082, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python2.7/httplib.py", line 1038, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python2.7/httplib.py", line 882, in _send_output
+    self.send(msg)
+  File "/usr/lib/python2.7/httplib.py", line 844, in send
+    self.connect()
+  File "/usr/lib/python2.7/dist-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python2.7/dist-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+  File "/usr/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+KeyboardInterrupt
+
+2018-10-04 17:35:31 : storeserv_lagom_blue_file_read_from_cassandra_time : Traceback (most recent call last):
+  File "create_visual.py", line 53, in main
+    request_result = json.loads(requests.put(elk_url, json=payload).content)
+  File "/usr/lib/python2.7/dist-packages/requests/api.py", line 126, in put
+    return request('put', url, data=data, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python2.7/httplib.py", line 1042, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python2.7/httplib.py", line 1082, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python2.7/httplib.py", line 1038, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python2.7/httplib.py", line 882, in _send_output
+    self.send(msg)
+  File "/usr/lib/python2.7/httplib.py", line 844, in send
+    self.connect()
+  File "/usr/lib/python2.7/dist-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python2.7/dist-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+  File "/usr/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+KeyboardInterrupt
+
+2018-10-04 17:35:32 : storeserv_lagom_blue_cassandra_processed_data_read_times : Traceback (most recent call last):
+  File "create_visual.py", line 53, in main
+    request_result = json.loads(requests.put(elk_url, json=payload).content)
+  File "/usr/lib/python2.7/dist-packages/requests/api.py", line 126, in put
+    return request('put', url, data=data, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python2.7/httplib.py", line 1042, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python2.7/httplib.py", line 1082, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python2.7/httplib.py", line 1038, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python2.7/httplib.py", line 882, in _send_output
+    self.send(msg)
+  File "/usr/lib/python2.7/httplib.py", line 844, in send
+    self.connect()
+  File "/usr/lib/python2.7/dist-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python2.7/dist-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+  File "/usr/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+KeyboardInterrupt
+
+2018-10-04 17:35:33 : storeserv_lagom_blue_cassandra_processed_data_write_times : Traceback (most recent call last):
+  File "create_visual.py", line 53, in main
+    request_result = json.loads(requests.put(elk_url, json=payload).content)
+  File "/usr/lib/python2.7/dist-packages/requests/api.py", line 126, in put
+    return request('put', url, data=data, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python2.7/httplib.py", line 1042, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python2.7/httplib.py", line 1082, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python2.7/httplib.py", line 1038, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python2.7/httplib.py", line 882, in _send_output
+    self.send(msg)
+  File "/usr/lib/python2.7/httplib.py", line 844, in send
+    self.connect()
+  File "/usr/lib/python2.7/dist-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python2.7/dist-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+  File "/usr/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+KeyboardInterrupt
+
+2018-10-04 17:35:34 : systemfilesactor_state_write_to_cassandra_time_blue : Traceback (most recent call last):
+  File "create_visual.py", line 53, in main
+    request_result = json.loads(requests.put(elk_url, json=payload).content)
+  File "/usr/lib/python2.7/dist-packages/requests/api.py", line 126, in put
+    return request('put', url, data=data, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python2.7/httplib.py", line 1042, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python2.7/httplib.py", line 1082, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python2.7/httplib.py", line 1038, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python2.7/httplib.py", line 882, in _send_output
+    self.send(msg)
+  File "/usr/lib/python2.7/httplib.py", line 844, in send
+    self.connect()
+  File "/usr/lib/python2.7/dist-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python2.7/dist-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+  File "/usr/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+KeyboardInterrupt
+
+2018-10-04 17:35:34 : systemfilesactor_state_read_from_cassandra_time_blue : Traceback (most recent call last):
+  File "create_visual.py", line 53, in main
+    request_result = json.loads(requests.put(elk_url, json=payload).content)
+  File "/usr/lib/python2.7/dist-packages/requests/api.py", line 126, in put
+    return request('put', url, data=data, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python2.7/httplib.py", line 1042, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python2.7/httplib.py", line 1082, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python2.7/httplib.py", line 1038, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python2.7/httplib.py", line 882, in _send_output
+    self.send(msg)
+  File "/usr/lib/python2.7/httplib.py", line 844, in send
+    self.connect()
+  File "/usr/lib/python2.7/dist-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python2.7/dist-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+  File "/usr/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+KeyboardInterrupt
+
+2018-10-04 17:35:35 : storeserv_lagom_cassandra_read_times_blue : Traceback (most recent call last):
+  File "create_visual.py", line 53, in main
+    request_result = json.loads(requests.put(elk_url, json=payload).content)
+  File "/usr/lib/python2.7/dist-packages/requests/api.py", line 126, in put
+    return request('put', url, data=data, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python2.7/httplib.py", line 1042, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python2.7/httplib.py", line 1082, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python2.7/httplib.py", line 1038, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python2.7/httplib.py", line 882, in _send_output
+    self.send(msg)
+  File "/usr/lib/python2.7/httplib.py", line 844, in send
+    self.connect()
+  File "/usr/lib/python2.7/dist-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python2.7/dist-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+  File "/usr/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+KeyboardInterrupt
+
