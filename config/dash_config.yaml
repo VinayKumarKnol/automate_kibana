@@ -1,5 +1,5 @@
 dashboard:
-  -  id: demo_test_all
+  -  id: cassandra_time_metrics_{{ env }}
      title: Cassandra Time Metrics -  {{ env }}
      visualIds:
        -
