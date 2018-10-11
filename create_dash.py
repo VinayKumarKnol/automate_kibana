@@ -41,7 +41,7 @@ def main(args):
         return
     for id, dashboard in dashboard_jsons:
         elk_url = elk_url + \
-                  "dashboard/" + id
+                  "dashboard:" + id
         with open(tmp_dir + '/' + dashboard, 'r') as json_file:
             try:
                 payload = json.load(json_file)
@@ -86,7 +86,7 @@ def logStatus(dashboard_id, response, log_file_location):
 
     with open(log_file_location, 'a') as log_file:
         message = time.strftime("%Y-%m-%d %H:%M:%S") + \
-                  ' : ' + dashboard_id + ' : ' + response
+                  ' : ' + dashboard_id + ' : ' + str(response)
         log_file.write(message + '\n')
 
 

@@ -1096,3 +1096,187 @@ KeyboardInterrupt
     return getattr(self._sock,name)(*args)
 KeyboardInterrupt
 
+2018-10-11 15:06:05 : storeserv_lagom_blue_table_of_contents : Traceback (most recent call last):
+  File "create_visual.py", line 52, in main
+    payload = json.load(json_file)
+  File "/usr/lib/python2.7/json/__init__.py", line 291, in load
+    **kw)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 380, in raw_decode
+    obj, end = self.scan_once(s, idx)
+ValueError: Expecting , delimiter: line 3 column 2 (char 28)
+
+2018-10-11 15:06:05 : storeserv_lagom_blue_file_write_to_cassandra_time : Traceback (most recent call last):
+  File "create_visual.py", line 52, in main
+    payload = json.load(json_file)
+  File "/usr/lib/python2.7/json/__init__.py", line 291, in load
+    **kw)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 380, in raw_decode
+    obj, end = self.scan_once(s, idx)
+ValueError: Expecting , delimiter: line 3 column 2 (char 28)
+
+2018-10-11 15:06:05 : storeserv_lagom_blue_file_read_from_cassandra_time : Traceback (most recent call last):
+  File "create_visual.py", line 52, in main
+    payload = json.load(json_file)
+  File "/usr/lib/python2.7/json/__init__.py", line 291, in load
+    **kw)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 380, in raw_decode
+    obj, end = self.scan_once(s, idx)
+ValueError: Expecting , delimiter: line 3 column 2 (char 28)
+
+2018-10-11 15:06:05 : storeserv_lagom_blue_cassandra_processed_data_read_times : Traceback (most recent call last):
+  File "create_visual.py", line 52, in main
+    payload = json.load(json_file)
+  File "/usr/lib/python2.7/json/__init__.py", line 291, in load
+    **kw)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 380, in raw_decode
+    obj, end = self.scan_once(s, idx)
+ValueError: Expecting , delimiter: line 3 column 2 (char 28)
+
+2018-10-11 15:06:05 : storeserv_lagom_blue_cassandra_processed_data_write_times : Traceback (most recent call last):
+  File "create_visual.py", line 52, in main
+    payload = json.load(json_file)
+  File "/usr/lib/python2.7/json/__init__.py", line 291, in load
+    **kw)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 380, in raw_decode
+    obj, end = self.scan_once(s, idx)
+ValueError: Expecting , delimiter: line 3 column 2 (char 28)
+
+2018-10-11 15:06:05 : systemfilesactor_state_write_to_cassandra_time_blue : Traceback (most recent call last):
+  File "create_visual.py", line 52, in main
+    payload = json.load(json_file)
+  File "/usr/lib/python2.7/json/__init__.py", line 291, in load
+    **kw)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 380, in raw_decode
+    obj, end = self.scan_once(s, idx)
+ValueError: Expecting , delimiter: line 3 column 2 (char 28)
+
+2018-10-11 15:06:05 : systemfilesactor_state_read_from_cassandra_time_blue : Traceback (most recent call last):
+  File "create_visual.py", line 52, in main
+    payload = json.load(json_file)
+  File "/usr/lib/python2.7/json/__init__.py", line 291, in load
+    **kw)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 380, in raw_decode
+    obj, end = self.scan_once(s, idx)
+ValueError: Expecting , delimiter: line 3 column 2 (char 28)
+
+2018-10-11 15:06:05 : storeserv_lagom_cassandra_read_times_blue : Traceback (most recent call last):
+  File "create_visual.py", line 52, in main
+    payload = json.load(json_file)
+  File "/usr/lib/python2.7/json/__init__.py", line 291, in load
+    **kw)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 380, in raw_decode
+    obj, end = self.scan_once(s, idx)
+ValueError: Expecting , delimiter: line 3 column 2 (char 28)
+
+2018-10-11 15:07:38 : storeserv_lagom_blue_table_of_contents : Traceback (most recent call last):
+  File "create_visual.py", line 56, in main
+    logStatus(id, request_result, log_file_location)
+  File "create_visual.py", line 80, in logStatus
+    ' : ' + visual_id + ' : ' + response
+TypeError: cannot concatenate 'str' and 'dict' objects
+
+2018-10-11 15:07:39 : storeserv_lagom_blue_file_write_to_cassandra_time : Traceback (most recent call last):
+  File "create_visual.py", line 56, in main
+    logStatus(id, request_result, log_file_location)
+  File "create_visual.py", line 80, in logStatus
+    ' : ' + visual_id + ' : ' + response
+TypeError: cannot concatenate 'str' and 'dict' objects
+
+2018-10-11 15:07:40 : storeserv_lagom_blue_file_read_from_cassandra_time : Traceback (most recent call last):
+  File "create_visual.py", line 56, in main
+    logStatus(id, request_result, log_file_location)
+  File "create_visual.py", line 80, in logStatus
+    ' : ' + visual_id + ' : ' + response
+TypeError: cannot concatenate 'str' and 'dict' objects
+
+2018-10-11 15:07:41 : storeserv_lagom_blue_cassandra_processed_data_read_times : Traceback (most recent call last):
+  File "create_visual.py", line 56, in main
+    logStatus(id, request_result, log_file_location)
+  File "create_visual.py", line 80, in logStatus
+    ' : ' + visual_id + ' : ' + response
+TypeError: cannot concatenate 'str' and 'dict' objects
+
+2018-10-11 15:07:43 : storeserv_lagom_blue_cassandra_processed_data_write_times : Traceback (most recent call last):
+  File "create_visual.py", line 56, in main
+    logStatus(id, request_result, log_file_location)
+  File "create_visual.py", line 80, in logStatus
+    ' : ' + visual_id + ' : ' + response
+TypeError: cannot concatenate 'str' and 'dict' objects
+
+2018-10-11 15:07:44 : systemfilesactor_state_write_to_cassandra_time_blue : Traceback (most recent call last):
+  File "create_visual.py", line 56, in main
+    logStatus(id, request_result, log_file_location)
+  File "create_visual.py", line 80, in logStatus
+    ' : ' + visual_id + ' : ' + response
+TypeError: cannot concatenate 'str' and 'dict' objects
+
+2018-10-11 15:07:45 : systemfilesactor_state_read_from_cassandra_time_blue : Traceback (most recent call last):
+  File "create_visual.py", line 56, in main
+    logStatus(id, request_result, log_file_location)
+  File "create_visual.py", line 80, in logStatus
+    ' : ' + visual_id + ' : ' + response
+TypeError: cannot concatenate 'str' and 'dict' objects
+
+2018-10-11 15:07:46 : storeserv_lagom_cassandra_read_times_blue : Traceback (most recent call last):
+  File "create_visual.py", line 56, in main
+    logStatus(id, request_result, log_file_location)
+  File "create_visual.py", line 80, in logStatus
+    ' : ' + visual_id + ' : ' + response
+TypeError: cannot concatenate 'str' and 'dict' objects
+
+2018-10-11 15:17:26 : storeserv_lagom_blue_table_of_contents : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 2, u'created': False, u'result': u'updated', u'_id': u'storeserv_lagom_blue_table_of_contents'}
+2018-10-11 15:17:27 : storeserv_lagom_blue_file_write_to_cassandra_time : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 2, u'created': False, u'result': u'updated', u'_id': u'storeserv_lagom_blue_file_write_to_cassandra_time'}
+2018-10-11 15:17:28 : storeserv_lagom_blue_file_read_from_cassandra_time : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 2, u'created': False, u'result': u'updated', u'_id': u'storeserv_lagom_blue_file_read_from_cassandra_time'}
+2018-10-11 15:17:29 : storeserv_lagom_blue_cassandra_processed_data_read_times : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 2, u'created': False, u'result': u'updated', u'_id': u'storeserv_lagom_blue_cassandra_processed_data_read_times'}
+2018-10-11 15:17:31 : storeserv_lagom_blue_cassandra_processed_data_write_times : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 2, u'created': False, u'result': u'updated', u'_id': u'storeserv_lagom_blue_cassandra_processed_data_write_times'}
+2018-10-11 15:17:32 : systemfilesactor_state_write_to_cassandra_time_blue : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 2, u'created': False, u'result': u'updated', u'_id': u'systemfilesactor_state_write_to_cassandra_time_blue'}
+2018-10-11 15:17:33 : systemfilesactor_state_read_from_cassandra_time_blue : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 2, u'created': False, u'result': u'updated', u'_id': u'systemfilesactor_state_read_from_cassandra_time_blue'}
+2018-10-11 15:17:34 : storeserv_lagom_cassandra_read_times_blue : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 2, u'created': False, u'result': u'updated', u'_id': u'storeserv_lagom_cassandra_read_times_blue'}
+2018-10-11 15:25:29 : storeserv_lagom_blue_table_of_contents : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 4, u'created': True, u'result': u'created', u'_id': u'storeserv_lagom_blue_table_of_contents'}
+2018-10-11 15:25:30 : storeserv_lagom_blue_file_write_to_cassandra_time : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 4, u'created': True, u'result': u'created', u'_id': u'storeserv_lagom_blue_file_write_to_cassandra_time'}
+2018-10-11 15:25:32 : storeserv_lagom_blue_file_read_from_cassandra_time : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 4, u'created': True, u'result': u'created', u'_id': u'storeserv_lagom_blue_file_read_from_cassandra_time'}
+2018-10-11 15:25:33 : storeserv_lagom_blue_cassandra_processed_data_read_times : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 4, u'created': True, u'result': u'created', u'_id': u'storeserv_lagom_blue_cassandra_processed_data_read_times'}
+2018-10-11 15:25:34 : storeserv_lagom_blue_cassandra_processed_data_write_times : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 4, u'created': True, u'result': u'created', u'_id': u'storeserv_lagom_blue_cassandra_processed_data_write_times'}
+2018-10-11 15:25:35 : systemfilesactor_state_write_to_cassandra_time_blue : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 4, u'created': True, u'result': u'created', u'_id': u'systemfilesactor_state_write_to_cassandra_time_blue'}
+2018-10-11 15:25:36 : systemfilesactor_state_read_from_cassandra_time_blue : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 4, u'created': True, u'result': u'created', u'_id': u'systemfilesactor_state_read_from_cassandra_time_blue'}
+2018-10-11 15:25:37 : storeserv_lagom_cassandra_read_times_blue : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 4, u'created': True, u'result': u'created', u'_id': u'storeserv_lagom_cassandra_read_times_blue'}
+2018-10-11 15:37:35 : visualization:storeserv_lagom_blue_table_of_contents : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 1, u'created': True, u'result': u'created', u'_id': u'visualization:storeserv_lagom_blue_table_of_contents'}
+2018-10-11 15:37:36 : visualization:storeserv_lagom_blue_file_write_to_cassandra_time : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 1, u'created': True, u'result': u'created', u'_id': u'visualization:storeserv_lagom_blue_file_write_to_cassandra_time'}
+2018-10-11 15:37:37 : visualization:storeserv_lagom_blue_file_read_from_cassandra_time : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 1, u'created': True, u'result': u'created', u'_id': u'visualization:storeserv_lagom_blue_file_read_from_cassandra_time'}
+2018-10-11 15:37:38 : visualization:storeserv_lagom_blue_cassandra_processed_data_read_times : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 1, u'created': True, u'result': u'created', u'_id': u'visualization:storeserv_lagom_blue_cassandra_processed_data_read_times'}
+2018-10-11 15:37:40 : visualization:storeserv_lagom_blue_cassandra_processed_data_write_times : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 1, u'created': True, u'result': u'created', u'_id': u'visualization:storeserv_lagom_blue_cassandra_processed_data_write_times'}
+2018-10-11 15:37:41 : visualization:systemfilesactor_state_write_to_cassandra_time_blue : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 1, u'created': True, u'result': u'created', u'_id': u'visualization:systemfilesactor_state_write_to_cassandra_time_blue'}
+2018-10-11 15:37:42 : visualization:systemfilesactor_state_read_from_cassandra_time_blue : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 1, u'created': True, u'result': u'created', u'_id': u'visualization:systemfilesactor_state_read_from_cassandra_time_blue'}
+2018-10-11 15:37:43 : visualization:storeserv_lagom_cassandra_read_times_blue : {u'_type': u'doc', u'_shards': {u'successful': 2, u'failed': 0, u'total': 2}, u'_index': u'.kibana-6', u'_version': 1, u'created': True, u'result': u'created', u'_id': u'visualization:storeserv_lagom_cassandra_read_times_blue'}

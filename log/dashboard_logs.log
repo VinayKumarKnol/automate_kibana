@@ -1,1 +1,20 @@
 2018-09-27 15:27:27 : demo_test_all{"created: "False""result" : "updated" }
+2018-10-11 15:45:40 : demo_test_all : Traceback (most recent call last):
+  File "create_dash.py", line 52, in main
+    logStatus(id, response, log_file_location)
+  File "create_dash.py", line 89, in logStatus
+    ' : ' + dashboard_id + ' : ' + response
+TypeError: cannot concatenate 'str' and 'dict' objects
+
+2018-10-11 15:46:03 : demo_test_all : {u'status': 404, u'error': {u'index_uuid': u'gfWoDl66ThSyfbUnRDdYxw', u'index': u'.kibana-6', u'root_cause': [{u'index_uuid': u'gfWoDl66ThSyfbUnRDdYxw', u'index': u'.kibana-6', u'reason': u'type[dashboard] missing', u'type': u'type_missing_exception'}], u'caused_by': {u'reason': u'trying to auto create mapping, but dynamic mapping is disabled', u'type': u'illegal_state_exception'}, u'reason': u'type[dashboard] missing', u'type': u'type_missing_exception'}}
+2018-10-11 15:47:10 : demo_test_all : Traceback (most recent call last):
+  File "create_dash.py", line 49, in main
+    response = json.loads(requests.put(elk_url, json=payload).content)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 382, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+

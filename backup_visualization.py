@@ -169,7 +169,7 @@ visuals:
 '''
 yaml_template = Template('''
   -
-    id: $id
+    id: visualization:$id
     title: $title
     env: $env
     visState: '$visState'

@@ -3,49 +3,49 @@ dashboard:
      title: Cassandra Time Metrics -  {{ env }}
      visualIds:
        -
-         id: storeserv_lagom_{{ env }}_table_of_contents
+         id: visualization:storeserv_lagom_{{ env }}_table_of_contents
          index: 1
          row: 1
          col: 1
          delim: ','
        -
-         id: storeserv_lagom_{{ env }}_file_write_to_cassandra_time
+         id: visualization:storeserv_lagom_{{ env }}_file_write_to_cassandra_time
          index: 2
          row: 1
          col: 7
          delim: ','
        -
-         id: storeserv_lagom_{{ env }}_file_read_from_cassandra_time
+         id: visualization:storeserv_lagom_{{ env }}_file_read_from_cassandra_time
          index: 3
          row: 2
          col: 1
          delim: ','
 
-       - id: storeserv_lagom_{{ env }}_cassandra_processed_data_read_times
+       - id: visualization:storeserv_lagom_{{ env }}_cassandra_processed_data_read_times
          index: 4
          row: 2
          col: 7
          delim: ','
 
-       - id: storeserv_lagom_{{ env }}_cassandra_processed_data_write_times
+       - id: visualization:storeserv_lagom_{{ env }}_cassandra_processed_data_write_times
          index: 5
          row: 3
          col: 1
          delim: ','
 
-       - id: systemfilesactor_state_write_to_cassandra_time_{{ env }}
+       - id: visualization:systemfilesactor_state_write_to_cassandra_time_{{ env }}
          index: 6
          row: 3
          col: 7
          delim: ','
 
-       - id: systemfilesactor_state_read_from_cassandra_time_{{ env }}
+       - id: visualization:systemfilesactor_state_read_from_cassandra_time_{{ env }}
          index: 7
          row: 4
          col: 1
          delim: ','
 
-       - id: storeserv_lagom_cassandra_read_times_{{ env }}
+       - id: visualization:storeserv_lagom_cassandra_read_times_{{ env }}
          index: 8
          row: 4
          col: 7

@@ -45,7 +45,7 @@ def main(args):
         return
     for id, visual in visuals_json:
         print id, visual
-        elk_url = dcos_elk_url + "visualization/" + id
+        elk_url = dcos_elk_url + id
         print elk_url
         with open(tmp_dir + '/' + visual, 'r') as json_file:
             try:
@@ -77,7 +77,7 @@ def logStatus(visual_id, response, log_file_location):
 
     with open(log_file_location, 'a') as log_file:
         message = time.strftime("%Y-%m-%d %H:%M:%S") + \
-                  ' : ' + visual_id + ' : ' + response
+                  ' : ' + visual_id + ' : ' + str(response)
         log_file.write(message + '\n')
 
 
@@ -97,7 +97,7 @@ def fetchClusterName(dcos_cluster_name):
     if "rigel" in dcos_cluster_name:
         return "http://monit-es-rigel.storefrontremote.com/.kibana/"
     elif "saturn" in dcos_cluster_name:
-        return "http://elk-saturn.storefrontremote.com/.kibana/"
+        return "http://elk-saturn.storefrontremote.com/.kibana/doc/"
     elif "neptune" in dcos_cluster_name:
         return "neptune"
     elif "jupiter" in dcos_cluster_name:
