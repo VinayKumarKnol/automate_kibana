@@ -42,6 +42,7 @@ def main(args):
     for id, dashboard in dashboard_jsons:
         elk_url = elk_url + \
                   "dashboard:" + id
+        print elk_url
         with open(tmp_dir + '/' + dashboard, 'r') as json_file:
             try:
                 payload = json.load(json_file)
@@ -69,9 +70,9 @@ def main(args):
 def fetchClusterName(dcos_cluster_name):
     # gets the name of the elastic search cluster.
     if "rigel" in dcos_cluster_name:
-        return "http://monit-es-rigel.storefrontremote.com/.kibana/"
+        return "http://monit-es-rigel.storefrontremote.com/.kibana/doc/"
     elif "saturn" in dcos_cluster_name:
-        return "http://elk-saturn.storefrontremote.com/.kibana/"
+        return "http://elk-saturn.storefrontremote.com/.kibana/doc/"
     elif "neptune" in dcos_cluster_name:
         return "neptune"
     elif "jupiter" in dcos_cluster_name:
