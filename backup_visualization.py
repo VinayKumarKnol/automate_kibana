@@ -77,10 +77,11 @@ def getAllTheVisualizations(args):
     # visual_id: an array of visualization ids
 
     elk_url = fetchElasticURL(args.dcos_cluster_url) + \
-              "_search?pretty&&size=" + total_visualizations
+              "_search?size=" + total_visualizations + "&" \
+              + "q=type:visualization" + "q=" + \
+              query_json.substitute(backup_env=args.backup_env)
     search_result = requests \
-        .get(elk_url,
-             json=json.loads(query_json.substitute(backup_env=args.backup_env))) \
+        .get(elk_url) \
         .json()
     visuals_jsons = search_result['hits']['hits']
     visual_ids = []
@@ -104,22 +105,21 @@ def loadVisualizationJSON(args, visual_index):
     env_replace = re.compile(re.escape(args.backup_env), re.IGNORECASE)
     visual_url = elk_url + visual_index
     visual_json = requests.get(visual_url).json()
-    visual_id = re.sub(r'\W+', '_', visual_json['_source']['title']).lower().rstrip('_')
+    visual_id = re.sub(r'\W+', '_', visual_json['_source']['visualization']['title']).lower().rstrip('_')
     return yaml_template.substitute(
         id=env_replace.sub('{{ env }}', visual_id),
-        title=env_replace.sub('{{ env }}', visual_json['_source']['title']),
+        title=env_replace.sub('{{ env }}', visual_json['_source']['visualization']['title']),
         env='{{ env }}',
         visState=json.dumps(env_replace.
-                            sub('{{ env }}', visual_json['_source']['visState'])
+                            sub('{{ env }}', visual_json['_source']['visualization']['visState'])
                             ).strip('"').replace("'", "''"),
         uiStateJSON=json.dumps(env_replace.sub('{{ env }}',
-                                                visual_json['_source']['uiStateJSON'])
+                                               visual_json['_source']['visualization']['uiStateJSON'])
                                ).strip('"'),
-        searchSourceJSON=json.dumps(env_replace.sub('{{ env }}', visual_json['_source']
-        ['kibanaSavedObjectMeta']
-        ['searchSourceJSON'])
-                                    )
-            .strip('"')
+        searchSourceJSON=json.dumps(env_replace.sub('{{ env }}',
+                                                    visual_json['_source']['visualization']['kibanaSavedObjectMeta'][
+                                                        'searchSourceJSON'])
+                                    ).strip('"')
     )
 
 
@@ -129,7 +129,7 @@ def fetchElasticURL(dcos_cluster_url):
     if "rigel" in dcos_cluster_url:
         return "http://monit-es-rigel.storefrontremote.com/.kibana/visualization/"
     elif "saturn" in dcos_cluster_url:
-        return "http://elk-saturn.storefrontremote.com/.kibana/visualization/"
+        return "http://elk-saturn.storefrontremote.com/.kibana-6/doc/"
     elif "neptune" in dcos_cluster_url:
         return "neptune"
     elif "jupiter" in dcos_cluster_url:
@@ -178,14 +178,7 @@ yaml_template = Template('''
     ''')
 
 query_json = Template('''
-{            
-  "query" : {
-    "multi_match" : {
-      "query": "$backup_env",
-      "fields": ["title", "query"]
-     }
-  }
-}
+visualization.title:*$backup_env*
 ''')
 
 args = parseArgs()
