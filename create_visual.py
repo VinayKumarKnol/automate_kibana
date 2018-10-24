@@ -101,7 +101,7 @@ def fetchClusterName(dcos_cluster_name):
     elif "neptune" in dcos_cluster_name:
         return "neptune"
     elif "jupiter" in dcos_cluster_name:
-        return "jupiter"
+        return "http://elk-jupiter.storefrontremote.com/.kibana-6/doc/"
 
 
 def create_bundle_conf_file(args, config, tmp_dir):

@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="eb9c4660-a173-4c8f-987b-17f804a468e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/dash_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/dash_config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/test.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/test.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/dashboard_logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/dashboard_logs.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/visual_logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/visual_logs.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/meta_backup_temp.j2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/meta_backup_temp.j2" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,13 +17,16 @@
     <session id="-247477624">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.closed" value="10" />
+          <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.31" value="2" />
           <entry key="project.open.time.33" value="2" />
+          <entry key="project.open.time.34" value="1" />
+          <entry key="project.open.time.45" value="1" />
+          <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.58" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -32,7 +35,7 @@
           <entry key="gitignore" value="33" />
           <entry key="json" value="10" />
           <entry key="py" value="9965" />
-          <entry key="yaml" value="745" />
+          <entry key="yaml" value="747" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -40,7 +43,7 @@
           <entry key="JSON" value="10" />
           <entry key="PLAIN_TEXT" value="33" />
           <entry key="Python" value="10482" />
-          <entry key="YAML" value="745" />
+          <entry key="YAML" value="747" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -52,7 +55,7 @@
           <entry key="gitignore" value="1" />
           <entry key="json" value="11" />
           <entry key="log" value="5" />
-          <entry key="py" value="19" />
+          <entry key="py" value="20" />
           <entry key="yaml" value="64" />
         </counts>
       </usages-collector>
@@ -60,7 +63,7 @@
         <counts>
           <entry key="JSON" value="11" />
           <entry key="PLAIN_TEXT" value="9" />
-          <entry key="Python" value="19" />
+          <entry key="Python" value="20" />
           <entry key="YAML" value="65" />
         </counts>
       </usages-collector>
@@ -71,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create_dash.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+            <state relative-caret-position="1580">
+              <caret line="79" selection-start-line="79" selection-end-line="79" />
               <folding>
                 <element signature="e#18#33#0" expanded="true" />
               </folding>
@@ -83,17 +86,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/log/dashboard_logs.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+            <state relative-caret-position="700">
+              <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/create_visual.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="129" column="24" lean-forward="true" selection-start-line="127" selection-start-column="4" selection-end-line="129" selection-end-column="24" />
+              <folding>
+                <element signature="e#18#33#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/create_visual.py">
+        <entry file="file://$PROJECT_DIR$/backup_visualization.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="753">
-              <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+            <state relative-caret-position="620">
+              <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
               <folding>
                 <element signature="e#18#33#0" expanded="true" />
               </folding>
@@ -104,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/backup_file_2018-10-11_15:04:51.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1476">
-              <caret line="693" column="48" selection-start-line="693" selection-start-column="43" selection-end-line="693" selection-end-column="48" />
+            <state relative-caret-position="240">
+              <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -118,8 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/backup_file_2018-09-27_12:39:21.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="516" lean-forward="true" selection-start-line="508" selection-end-line="516" />
+            <state relative-caret-position="10320">
+              <caret line="516" selection-start-line="508" selection-end-line="516" />
             </state>
           </provider>
         </entry>
@@ -127,17 +142,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/dash_config.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="1" column="41" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="41" />
+            <state relative-caret-position="80">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/test.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="6" column="741" selection-start-line="6" selection-start-column="741" selection-end-line="6" selection-end-column="741" />
+            <state relative-caret-position="60">
+              <caret line="3" column="57" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -242,26 +257,6 @@
               <item name="automate_kibana" type="b2602c69:ProjectViewProjectNode" />
               <item name="automate_kibana" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="automate_kibana" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automate_kibana" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="automate_kibana" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automate_kibana" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="automate_kibana" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automate_kibana" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="automate_kibana" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automate_kibana" type="462c0819:PsiDirectoryNode" />
-              <item name="tmp-dashboard-config-dir" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -322,7 +317,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32998326" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32998326" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4992163" visible="true" weight="0.32998326" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4992163" weight="0.32888147" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007837" side_tool="true" weight="0.32998326" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.4992163" weight="0.32998326" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -330,7 +325,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -341,7 +336,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32998326" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32998326" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4992163" weight="0.32998326" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4992163" visible="true" weight="0.32998326" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007837" side_tool="true" weight="0.32998326" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.4992163" weight="0.32998326" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -422,13 +417,7 @@
     <entry file="file://$PROJECT_DIR$/tmp-dashboard-config-dir/cluster_memory_dashboard.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/visual_conf_duplicate.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/config/visual_conf_duplicate.yaml" />
     <entry file="file://$PROJECT_DIR$/config/backup_file_2018-09-25_13:51:31.yaml" />
     <entry file="file://$PROJECT_DIR$/config/backup_file_2018-09-27_12:17:30.yaml" />
     <entry file="file://$PROJECT_DIR$/config/backup_file_2018-09-27_12:22:55.yaml" />
@@ -454,16 +443,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backup_visualization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="171" column="22" selection-start-line="171" selection-start-column="22" selection-end-line="171" selection-end-column="22" />
-          <folding>
-            <element signature="e#18#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/log/visual_logs.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
@@ -478,68 +457,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/backup_file_2018-09-27_12:39:21.yaml">
+    <entry file="file://$PROJECT_DIR$/config/visual_conf.yaml" />
+    <entry file="file://$PROJECT_DIR$/create_dash.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="516" lean-forward="true" selection-start-line="508" selection-end-line="516" />
+        <state relative-caret-position="1580">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+          <folding>
+            <element signature="e#18#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/dashboard_logs.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backup_visualization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+          <folding>
+            <element signature="e#18#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/backup_file_2018-10-11_15:04:51.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1476">
-          <caret line="693" column="48" selection-start-line="693" selection-start-column="43" selection-end-line="693" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/visual_conf.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+        <state relative-caret-position="240">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/backup_file_2018-10-11_13:31:58.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/log/dashboard_logs.log">
+    <entry file="file://$PROJECT_DIR$/config/backup_file_2018-09-27_12:39:21.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/create_visual.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="753">
-          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
-          <folding>
-            <element signature="e#18#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/create_dash.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
-          <folding>
-            <element signature="e#18#33#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="10320">
+          <caret line="516" selection-start-line="508" selection-end-line="516" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/dash_config.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="41" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="41" />
+        <state relative-caret-position="80">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/test.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="6" column="741" selection-start-line="6" selection-start-column="741" selection-end-line="6" selection-end-column="741" />
+        <state relative-caret-position="60">
+          <caret line="3" column="57" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create_visual.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="129" column="24" lean-forward="true" selection-start-line="127" selection-start-column="4" selection-end-line="129" selection-end-column="24" />
+          <folding>
+            <element signature="e#18#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
