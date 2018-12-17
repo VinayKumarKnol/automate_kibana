@@ -5,9 +5,11 @@ dashboard:
 
        -
          id: visualization:storeserv_lagom_{{ env }}_table_of_contents
-         index: 1
          row: 1
-         col: 1
+         col: 1 
+         index: 11
+         size_x: 6
+         size_y: 3
          delim: ','
        -
          id: visualization:system_actor_file_processing_rate_total_{{ env }}
