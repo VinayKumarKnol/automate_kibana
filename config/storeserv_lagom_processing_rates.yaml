@@ -92,9 +92,11 @@ dashboard:
 
 
        - id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_message_processing_time_milliseconds
-         index: 12
-         row: 6
-         col: 7
+         row: 22
+         col: 1 
+         index: 18
+         size_x: 6
+         size_y: 3
          delim: ','
 
        - id: visualization:storeserv_lagom_file_reprocessing_time_{{ env }}
