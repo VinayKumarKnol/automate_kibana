@@ -77,9 +77,11 @@ dashboard:
          delim: ','
 
        - id: visualization:storeserv_lagom_{{ env }}_normal_file_parsing_time
-         index: 10
-         row: 5
-         col: 7
+         row: 19
+         col: 1 
+         index: 16
+         size_x: 6
+         size_y: 3
          delim: ','
 
        - id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_message_processing_rates
