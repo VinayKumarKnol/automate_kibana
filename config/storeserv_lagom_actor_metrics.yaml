@@ -45,9 +45,11 @@ dashobard:
         delim: ','
 
       - id: visualization:storeserv_lagom_remote_message_received_size_{{ env }}
+        row: 7
+        col: 7     
         index: 6
-        row: 3
-        col: 7
+        size_x: 6
+        size_y: 3
         delim: ','
 
       - id: visualization:storeserv_lagom_remote_message_serialization_time_{{ env }}
