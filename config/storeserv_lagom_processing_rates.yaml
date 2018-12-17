@@ -37,9 +37,11 @@ dashboard:
          delim: ','
 
        - id: visualization:storeserv_lagom_bad_file_rates_{{ env }}
-         index: 5
-         row: 3
-         col: 1
+         row: 7
+         col: 7     
+         index: 4
+         size_x: 6
+         size_y: 3
          delim: ','
 
        - id: visualization:storeserv_lagom_new_files_inserted_to_cassandra_cinnamon_metrics_{{ env }}
