@@ -51,11 +51,11 @@ dashboard:
          size_y: 2
          delim: ','
 
-       - id: visualization:storeserv_lagom_deadletter_event_{{ env }}
-         index: 7
-         row: 4
-         col: 1
-         delim: ','
+      # - id: visualization:storeserv_lagom_deadletter_event_{{ env }}
+      #   index: 7
+      #   row: 4
+      #   col: 1
+      #    delim: ','
 
        - id: visualization:storeserv_lagom_blue_split_brain_resolver_event_{{ env }}
          row: 21
@@ -66,9 +66,11 @@ dashboard:
          delim: ','
 
        - id: visualization:storeserv_lagom_cassandra_read_counts_{{ env }}
-         index: 9
-         row: 5
+         row: 22
          col: 1
+         index: 16
+         size_x: 12
+         size_y: 2
          delim: ','
 
        - id: visualization:storeserv_lagom_cassandra_read_times_{{ env }}
