@@ -58,9 +58,11 @@ dashboard:
          delim: ','
 
        - id: visualization:storeserv_lagom_blue_split_brain_resolver_event_{{ env }}
-         index: 8
-         row: 4
-         col: 7
+         row: 21
+         col: 1
+         index: 18
+         size_x: 12
+         size_y: 1
          delim: ','
 
        - id: visualization:storeserv_lagom_cassandra_read_counts_{{ env }}
