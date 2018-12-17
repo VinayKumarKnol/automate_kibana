@@ -5,9 +5,11 @@ dashboard:
 
        -
          id: visualization:storeserv_lagom_{{ env }}_table_of_contents
-         index: 1
          row: 1
-         col: 1
+         col: 1 
+         index: 27
+         size_x: 4
+         size_y: 6
          delim: ','
        -
          id: visualization:storeserv_lagom_firehose_total_ingest_rate_all_nodes_{{ env }}
