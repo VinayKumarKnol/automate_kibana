@@ -11,17 +11,21 @@ dashboard:
          size_x: 6
          size_y: 3
          delim: ','
-       -
-         id: visualization:system_actor_file_processing_rate_total_{{ env }}
-         index: 2
-         row: 1
-         col: 7
-         delim: ','
+       # -
+       #   id: visualization:system_actor_file_processing_rate_total_{{ env }}
+       #   row: 1
+       #   col: 7 
+       #   index: 23
+       #   size_x: 6
+       #   size_y: 3
+       #   delim: ','
        -
          id: visualization:storeserv_lagom_sunny_day_rates_{{ env }}
+         row: 4
+         col: 1     
          index: 3
-         row: 2
-         col: 1
+         size_x: 6
+         size_y: 3
          delim: ','
        -
          id: visualization:storeserv_lagom_duplicate_file_rates_{{ env }}
