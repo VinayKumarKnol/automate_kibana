@@ -61,9 +61,11 @@ dashobard:
         delim: ','
 
       - id: visualization:storeserv_lagom_{{ env }}_actor_mailbox_time
-        index: 8
-        row: 4
-        col: 7
+        row: 13
+        col: 1     
+        index: 9
+        size_x: 6
+        size_y: 3
         delim: ','
 
       - id: visualization:storeserv_lagom_remote_message_sent_size_{{ env }}
