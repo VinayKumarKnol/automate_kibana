@@ -21,9 +21,11 @@ dashboard:
          delim: ','
        -
          id: visualization:lagom_file_ingestion_rate_from_kafka_total_cinnamon_metrics_{{ env }}
-         index: 3
-         row: 2
-         col: 1
+         row: 13
+         col: 1 
+         index: 11
+         size_x: 6
+         size_y: 3
          delim: ','
        -
          id: visualization:storeserv_lagom_files_completely_processed_all_nodes_{{ env }}
