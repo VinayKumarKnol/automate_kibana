@@ -13,9 +13,11 @@ dashboard:
          delim: ','
        -
          id: visualization:jvm_storeserv_lagom_heap_used_{{ env }}
-         index: 2
          row: 1
-         col: 7
+         col: 5
+         index: 11
+         size_x: 8
+         size_y: 3
          delim: ','
        -
          id: visualization:jvm_storeserv_lagom_heap_used_{{ env }}
