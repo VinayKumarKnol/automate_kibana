@@ -62,7 +62,9 @@ dashboard:
          delim: ','
 
        - id: visualization:storeserv_lagom_{{ env }}_refill_cache_file_parsing_time
-         index: 8
-         row: 4
-         col: 7
+         row: 11
+         col: 7 
+         index: 9
+         size_x: 6
+         size_y: 3
          delim: ''
