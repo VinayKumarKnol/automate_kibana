@@ -77,7 +77,9 @@ dashboard:
          delim: ','
 
        - id: visualization:storeserv_lagom_{{ env }}_log_rates
-         index: 10
-         row: 5
-         col: 7
+         row: 19
+         col: 7 
+         index: 13
+         size_x: 6
+         size_y: 3
          delim: ''
