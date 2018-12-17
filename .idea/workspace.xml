@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="eb9c4660-a173-4c8f-987b-17f804a468e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/config/dash_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/dash_config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/test.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/test.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/dashboard_logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/dashboard_logs.log" afterDir="false" />
+=======
+>>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,13 +20,23 @@
     <session id="-247477624">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+<<<<<<< Updated upstream
           <entry key="project.closed" value="5" />
           <entry key="project.open.time.2" value="1" />
+=======
+          <entry key="project.closed" value="11" />
+          <entry key="project.open.time.2" value="2" />
+>>>>>>> Stashed changes
           <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.31" value="2" />
           <entry key="project.open.time.33" value="2" />
           <entry key="project.open.time.58" value="1" />
+<<<<<<< Updated upstream
           <entry key="project.opened" value="7" />
+=======
+          <entry key="project.opened" value="12" />
+>>>>>>> Stashed changes
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -31,16 +44,28 @@
           <entry key="Python Console" value="517" />
           <entry key="gitignore" value="33" />
           <entry key="json" value="10" />
+<<<<<<< Updated upstream
           <entry key="py" value="9965" />
           <entry key="yaml" value="745" />
+=======
+          <entry key="py" value="9992" />
+          <entry key="txt" value="26" />
+          <entry key="yaml" value="747" />
+>>>>>>> Stashed changes
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="10" />
+<<<<<<< Updated upstream
           <entry key="PLAIN_TEXT" value="33" />
           <entry key="Python" value="10482" />
           <entry key="YAML" value="745" />
+=======
+          <entry key="PLAIN_TEXT" value="59" />
+          <entry key="Python" value="10509" />
+          <entry key="YAML" value="747" />
+>>>>>>> Stashed changes
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -64,6 +89,11 @@
           <entry key="YAML" value="65" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.create.new" value="1" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
@@ -71,8 +101,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create_dash.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="236">
               <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+=======
+            <state relative-caret-position="1440">
+              <caret line="79" selection-start-line="79" selection-end-line="79" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="e#18#33#0" expanded="true" />
               </folding>
@@ -83,8 +118,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/log/dashboard_logs.log">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="149">
               <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+=======
+            <state relative-caret-position="700">
+              <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/create_visual.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="920">
+              <caret line="103" column="70" lean-forward="true" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="70" />
+              <folding>
+                <element signature="e#18#33#0" expanded="true" />
+              </folding>
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -92,8 +144,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create_visual.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="753">
               <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+=======
+            <state relative-caret-position="480">
+              <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="e#18#33#0" expanded="true" />
               </folding>
@@ -188,6 +245,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="kibana-6-fix" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -205,10 +267,10 @@
         <option value="$PROJECT_DIR$/log/visual_logs.log" />
         <option value="$PROJECT_DIR$/backup_visualization.py" />
         <option value="$PROJECT_DIR$/config/backup_file_2018-10-11_15:04:51.yaml" />
-        <option value="$PROJECT_DIR$/create_visual.py" />
         <option value="$PROJECT_DIR$/create_dash.py" />
         <option value="$PROJECT_DIR$/config/dash_config.yaml" />
         <option value="$PROJECT_DIR$/config/test.yaml" />
+        <option value="$PROJECT_DIR$/create_visual.py" />
       </list>
     </option>
   </component>
@@ -296,6 +358,14 @@
       <option name="presentableId" value="Default" />
       <updated>1537433863040</updated>
     </task>
+    <task id="LOCAL-00001" summary="added jupiter elk url.">
+      <created>1540378928261</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1540378928262</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -309,9 +379,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="34" width="1299" height="734" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -321,8 +390,13 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32998326" />
+<<<<<<< Updated upstream
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32998326" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4992163" visible="true" weight="0.32998326" />
+=======
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32998326" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4992163" weight="0.32888147" />
+>>>>>>> Stashed changes
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007837" side_tool="true" weight="0.32998326" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.4992163" weight="0.32998326" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -377,6 +451,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added jupiter elk url." />
+    <option name="LAST_COMMIT_MESSAGE" value="added jupiter elk url." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/config/backup_file_2018-09-21 15:00:04" />
@@ -480,8 +558,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/backup_file_2018-09-27_12:39:21.yaml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="291">
           <caret line="516" lean-forward="true" selection-start-line="508" selection-end-line="516" />
+=======
+        <state relative-caret-position="1440">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+          <folding>
+            <element signature="e#18#33#0" expanded="true" />
+          </folding>
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -494,8 +580,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/visual_conf.yaml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="411">
           <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+=======
+        <state relative-caret-position="480">
+          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+          <folding>
+            <element signature="e#18#33#0" expanded="true" />
+          </folding>
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -538,8 +632,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/test.yaml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="106">
           <caret line="6" column="741" selection-start-line="6" selection-start-column="741" selection-end-line="6" selection-end-column="741" />
+=======
+        <state relative-caret-position="920">
+          <caret line="103" column="70" lean-forward="true" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="70" />
+          <folding>
+            <element signature="e#18#33#0" expanded="true" />
+          </folding>
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
