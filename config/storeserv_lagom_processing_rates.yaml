@@ -69,9 +69,11 @@ dashboard:
          delim: ','
 
        - id: visualization:file_reprocessing_rate_{{ env }}
+         row: 13
+         col: 7     
          index: 9
-         row: 5
-         col: 1
+         size_x: 6
+         size_y: 3
          delim: ','
 
        - id: visualization:storeserv_lagom_{{ env }}_normal_file_parsing_time
