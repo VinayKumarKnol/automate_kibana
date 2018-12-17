@@ -13,9 +13,11 @@ dashboard:
          delim: ','
        -
          id: visualization:storeserv_lagom_firehose_total_ingest_rate_all_nodes_{{ env }}
-         index: 2
          row: 1
-         col: 7
+         col: 5 
+         index: 26
+         size_x: 8
+         size_y: 3
          delim: ','
        -
          id: visualization:lagom_file_ingestion_rate_from_kafka_total_cinnamon_metrics_{{ env }}
