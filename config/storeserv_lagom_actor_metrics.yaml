@@ -77,9 +77,11 @@ dashobard:
         delim: ','
 
       - id: visualization:storeserv_lagom_{{ env }}_actor_processing_time_average
+        row: 13
+        col: 7     
         index: 10
-        row: 5
-        col: 7
+        size_x: 6
+        size_y: 3
         delim: ','
 
       - id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_message_processing_rates
