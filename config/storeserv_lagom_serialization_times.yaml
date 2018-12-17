@@ -30,9 +30,11 @@ dashboard:
          delim: ','
        -
          id: visualization:storeserv_lagom_{{ env }}_system_files_actor_state_serialization_time
-         index: 4
-         row: 2
+         row: 5
          col: 7
+         index: 3
+         size_x: 6
+         size_y: 3
          delim: ','
 
        - id: visualization:storeserv_lagom_{{ env }}_casenotification_serialization_time
