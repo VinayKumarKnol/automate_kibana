@@ -53,9 +53,11 @@ dashobard:
         delim: ','
 
       - id: visualization:storeserv_lagom_remote_message_serialization_time_{{ env }}
-        index: 7
-        row: 4
-        col: 1
+        row: 10
+        col: 1     
+        index: 8
+        size_x: 6
+        size_y: 3
         delim: ','
 
       - id: visualization:storeserv_lagom_{{ env }}_actor_mailbox_time
