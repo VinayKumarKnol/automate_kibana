@@ -103,9 +103,11 @@ dashobard:
 
 
       - id: visualization:storeserv_lagom_{{ env }}_systemactors_running_by_state
+        row: 19
+        col: 1     
         index: 13
-        row: 7
-        col: 1
+        size_x: 6
+        size_y: 3
         delim: ','
 
       - id: visualization:storeserv_lagom_actor_stash_size_max_{{ env }}
