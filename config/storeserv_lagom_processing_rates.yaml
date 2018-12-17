@@ -85,9 +85,11 @@ dashboard:
          delim: ','
 
        - id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_message_processing_rates
+         row: 16
+         col: 1     
          index: 11
-         row: 6
-         col: 1
+         size_x: 6
+         size_y: 3
          delim: ','
 
 
