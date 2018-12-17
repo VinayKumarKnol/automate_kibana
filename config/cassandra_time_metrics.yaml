@@ -58,7 +58,9 @@ dashboard:
 #         delim: ','
 
        - id: visualization:storeserv_lagom_cassandra_read_times_{{ env }}
-         index: 8
-         row: 4
-         col: 7
+         row: 11
+         col: 1
+         index: 1
+         size_x: 6
+         size_y: 3
          delim: ''
