@@ -14,9 +14,11 @@ dashboard:
 
        -
          id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_message_processing_time_milliseconds
-         index: 2
          row: 1
-         col: 7
+         col: 5 
+         index: 7
+         size_x: 8
+         size_y: 4
          delim: ','
        -
          id: visualization:storeserv_lagom_{{ env }}_systemdatapoint_serialization_time
