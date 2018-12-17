@@ -61,9 +61,11 @@ dashboard:
          delim: ','
 
        - id: visualization:storeserv_lagom_number_of_systems_that_need_reprocessing_{{ env }}
-         index: 8
-         row: 4
-         col: 7
+         row: 13
+         col: 1 
+         index: 21
+         size_x: 6
+         size_y: 3
          delim: ','
 
        - id: visualization:file_reprocessing_rate_{{ env }}
