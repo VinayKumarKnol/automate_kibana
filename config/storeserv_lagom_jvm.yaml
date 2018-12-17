@@ -58,7 +58,9 @@ dashboard:
          delim: ','
 
        - id: visualization:jvm_storeserv_lagom_old_gc_times_{{ env }}
-         index: 8
-         row: 4
-         col: 7
+         row: 10
+         col: 1
+         index: 22
+         size_x: 6
+         size_y: 3
          delim: ''
