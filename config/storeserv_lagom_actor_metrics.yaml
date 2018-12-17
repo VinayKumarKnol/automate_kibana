@@ -13,9 +13,11 @@ dashobard:
         delim: ','
       -
         id: visualization:storeserv_lagom_actor_mailbox_size_max_{{ env }}
-        index: 2
         row: 1
-        col: 7
+        col: 5 
+        index: 1
+        size_x: 8
+        size_y: 3
         delim: ','
       -
         id: visualization:storeserv_lagom_running_actors_over_time_{{ env }}_max_count_per_bucket
