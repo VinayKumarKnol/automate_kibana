@@ -4,9 +4,11 @@ dashboard:
      visualIds:
        -
          id: visualization:storeserv_lagom_{{ env }}_table_of_contents
-         index: 1
          row: 1
          col: 1
+         index: 24
+         size_x: 4
+         size_y: 6
          delim: ','
        -
          id: visualization:akka_cluster_reachable_nodes_storeserv_lagom_{{ env }}
