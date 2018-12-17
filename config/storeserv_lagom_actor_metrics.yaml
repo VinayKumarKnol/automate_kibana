@@ -1,0 +1,65 @@
+dashobard:
+  -  id: lagom_speeds_and_feeds_{{ env }}
+     title: Lagom Speeds and Feeds -  {{ env }}
+     visualIds:
+
+       -
+         id: visualization:storeserv_lagom_{{ env }}_table_of_contents
+         index: 1
+         row: 1
+         col: 1
+         delim: ','
+       -
+         id: visualization:storeserv_lagom_firehose_total_ingest_rate_all_nodes_{{ env }}
+         index: 2
+         row: 1
+         col: 7
+         delim: ','
+       -
+         id: visualization:lagom_file_ingestion_rate_from_kafka_total_cinnamon_metrics_{{ env }}
+         index: 3
+         row: 2
+         col: 1
+         delim: ','
+       -
+         id: visualization:storeserv_lagom_files_completely_processed_all_nodes_{{ env }}
+         index: 4
+         row: 2
+         col: 7
+         delim: ','
+
+       - id: visualization:lagom_monthly_file_ingestion_rate_from_kafka_total_cinnamon_metrics_{{ env }}
+         index: 5
+         row: 3
+         col: 1
+         delim: ','
+
+       - id: visualization:storeserv_lagom_files_ignored_all_nodes_{{ env }}
+         index: 6
+         row: 3
+         col: 7
+         delim: ','
+
+       - id: visualization:lagom_output_rate_{{ env }}_total
+         index: 7
+         row: 4
+         col: 1
+         delim: ','
+
+       - id: visualization:lagom_data_ingestion_rate_from_kafka_total_cinnamon_metrics_{{ env }}
+         index: 8
+         row: 4
+         col: 7
+         delim: ','
+
+       - id: visualization:average_file_immigration_age_{{ env }}
+         index: 9
+         row: 5
+         col: 1
+         delim: ','
+
+       - id: visualization:storeserv_lagom_{{ env }}_log_rates
+         index: 10
+         row: 5
+         col: 7
+         delim: ''

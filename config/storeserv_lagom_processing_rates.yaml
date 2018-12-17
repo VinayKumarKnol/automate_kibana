@@ -1,0 +1,84 @@
+dashboard:
+  -  id: storeserv_lagom_processing_rates_{{ env }}
+     title: Storeserv Lagom Processing Rates -  {{ env }}
+     visualIds:
+
+       -
+         id: visualization:storeserv_lagom_{{ env }}_table_of_contents
+         index: 1
+         row: 1
+         col: 1
+         delim: ','
+       -
+         id: visualization:system_actor_file_processing_rate_total_{{ env }}
+         index: 2
+         row: 1
+         col: 7
+         delim: ','
+       -
+         id: visualization:storeserv_lagom_sunny_day_rates_{{ env }}
+         index: 3
+         row: 2
+         col: 1
+         delim: ','
+       -
+         id: visualization:storeserv_lagom_duplicate_file_rates_{{ env }}
+         index: 4
+         row: 2
+         col: 7
+         delim: ','
+
+       - id: visualization:storeserv_lagom_bad_file_rates_{{ env }}
+         index: 5
+         row: 3
+         col: 1
+         delim: ','
+
+       - id: visualization:storeserv_lagom_new_files_inserted_to_cassandra_cinnamon_metrics_{{ env }}
+         index: 6
+         row: 3
+         col: 7
+         delim: ','
+
+       - id: visualization:storeserv_lagom_out_of_order_rates_{{ env }}
+         index: 7
+         row: 4
+         col: 1
+         delim: ','
+
+       - id: visualization:storeserv_lagom_number_of_systems_that_need_reprocessing_{{ env }}
+         index: 8
+         row: 4
+         col: 7
+         delim: ','
+
+       - id: visualization:file_reprocessing_rate_{{ env }}
+         index: 9
+         row: 5
+         col: 1
+         delim: ','
+
+       - id: visualization:storeserv_lagom_{{ env }}_normal_file_parsing_time
+         index: 10
+         row: 5
+         col: 7
+         delim: ','
+
+       - id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_message_processing_rates
+         index: 11
+         row: 6
+         col: 1
+         delim: ','
+
+
+       - id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_message_processing_time_milliseconds
+         index: 12
+         row: 6
+         col: 7
+         delim: ','
+
+       - id: visualization:storeserv_lagom_file_reprocessing_time_{{ env }}
+         index: 13
+         row: 7
+         col: 1
+         delim: ''

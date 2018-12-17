@@ -1,0 +1,70 @@
+dashboard:
+  -  id: cluster_health_{{ env }}
+     title: Cluster Health -  {{ env }}
+     visualIds:
+       -
+         id: visualization:storeserv_lagom_{{ env }}_table_of_contents
+         index: 1
+         row: 1
+         col: 1
+         delim: ','
+       -
+         id: visualization:akka_cluster_reachable_nodes_storeserv_lagom_{{ env }}
+         index: 2
+         row: 1
+         col: 7
+         delim: ','
+       -
+         id: visualization:akka_cluster_unreachable_nodes_storeserv_lagom_{{ env }}
+         index: 3
+         row: 2
+         col: 1
+         delim: ','
+
+       - id: visualization:storeserv_lagom_firehose_total_ingest_rate_all_nodes_{{ env }}
+         index: 4
+         row: 2
+         col: 7
+         delim: ','
+
+       - id: visualization:jvm_storeserv_lagom_heap_used_{{ env }}
+         index: 5
+         row: 3
+         col: 1
+         delim: ','
+
+       - id: visualization:storeserv_lagom_{{ env }}_log_rates
+         index: 6
+         row: 3
+         col: 7
+         delim: ','
+
+       - id: visualization:storeserv_lagom_deadletter_event_{{ env }}
+         index: 7
+         row: 4
+         col: 1
+         delim: ','
+
+       - id: visualization:storeserv_lagom_blue_split_brain_resolver_event_{{ env }}
+         index: 8
+         row: 4
+         col: 7
+         delim: ','
+
+       - id: visualization:storeserv_lagom_cassandra_read_counts_{{ env }}
+         index: 9
+         row: 5
+         col: 1
+         delim: ','
+
+       - id: visualization:storeserv_lagom_cassandra_read_times_{{ env }}
+         index: 10
+         row: 5
+         col: 7
+         delim: ','
+
+       - id: visualization:storeserv_lagom_running_actors_over_time_{{ env }}_max_count_per_bucket
+         index: 11
+         row: 6
+         col: 1
+         delim: ''

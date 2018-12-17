@@ -1,0 +1,649 @@
+StoreServ Lagom Dispatchers - Green
+StoreServ Lagom Green Active Threads
+ row: 4
+ col:1
+ index: 1
+ size_x: 6
+ size_y: 3
+
+StoreServ Lagom Green Dispatchers Running Threads
+ row: 4
+ col:7
+ index: 2
+ size_x: 6
+ size_y: 3
+
+StoreServ Lagom Green Dispatchers Processed Tasks
+ row: 13
+ col:7
+ index: 3
+ size_x: 6
+ size_y: 3 
+
+StoreServ Lagom Green Dispatchers Queued Tasks
+ row: 10
+ col:7
+ index: 4
+ size_x: 6
+ size_y: 3 
+
+StoreServ Lagom Green Dispatchers Parallelism   
+ row: 1
+ col:7
+ index: 5
+ size_x: 6
+ size_y: 3 
+
+StoreServ Lagom Green Dispatchers Pool Size
+ row: 7
+ col:7
+ index: 6
+ size_x: 6
+ size_y: 3 
+
+StoreServ Lagom Green Dispatchers Max Pool Size
+ row: 10
+ col:1
+ index: 7
+ size_x: 6
+ size_y: 3
+
+StoreServ Lagom Green Dispatchers Core Pool Size 
+ row: 13
+ col:1
+ index: 8
+ size_x: 6
+ size_y: 3
+
+StoreServ Lagom Green Table of Contents
+ row: 1
+ col:1
+ index: 9
+ size_x: 6
+ size_y: 3
+
+StoreServ Lagom Green Active Threads Max
+ row: 7
+ col:1
+ index: 10
+ size_x: 6
+ size_y: 3
+
+
+
+Cassandra Time Metrics - Green
+AWEzV4QMgsJN7hbIm2FV
+ row: 11
+ col:1
+ index: 1
+ size_x: 6
+ size_y: 3
+
+StoreServ Lagom Green Table of Contents AWAyeSGMgsJN7hbImgPx
+ row: 1
+ col:1
+ index: 2
+ size_x: 12
+ size_y: 4
+StoreServ Lagom Green File Read from Cassandra Time AWEzYQ1MgsJN7hbIm2If
+ row: 5
+ col:1
+ index: 3
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Green Cassandra Processed Data Read Times AWFCUvFrgsJN7hbInI7k
+ row: 8
+ col:1
+ index: 4
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Green Cassandra Processed Data Write Times AWFCU8aogsJN7hbInI7l
+ row: 8
+ col:7
+ index: 5
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Green File Write To Cassandra Time AWEzYh8HgsJN7hbIm2KE
+ row: 5
+ col:7
+ index: 6
+ size_x: 6
+ size_y: 3
+SystemFilesActor State Write To Cassandra Time AWFCWW-8gsJN7hbInI-u
+ row: 11
+ col:7
+ index: 7
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Green SystemDataPoint Publish Time AWFTLzd1-shruz57A7h-
+ row: 14
+ col:7
+ index: 9
+ size_x: 6
+ size_y: 3
+
+Storeserv Lagom JVM - Green
+JVM storeserv-lagom % Heap used - Green 3ccc7380-d602-11e7-a774-c3d7f8e4d9bd
+ row: 4
+ col:1
+ index: 10
+ size_x: 6
+ size_y: 3
+JVM storeserv-lagom Heap used - Green  e098b250-d60a-11e7-ba8b-3b56c10e0bd3
+ row: 1
+ col:5
+ index: 11
+ size_x: 8
+ size_y: 3
+JVM storeserv-lagom Max Heap - Green 1d893dc0-d60a-11e7-a774-c3d7f8e4d9bd
+ row: 4
+ col:7
+ index: 12
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Green Table of Contents AWAyeSGMgsJN7hbImgPx
+ row: 1
+ col:1
+ index: 17
+ size_x: 4
+ size_y: 3
+JVM storeserv-lagom Young GC Counts - Green 1b13f1a0-d602-11e7-a774-c3d7f8e4d9bd
+ row: 7
+ col:1
+ index: 18
+ size_x: 6
+ size_y: 3
+JVM storeserv-lagom Young GC Times - Green ed05c860-d601-11e7-a774-c3d7f8e4d9bd
+ row: 7
+ col:7
+ index: 19
+ size_x: 6
+ size_y: 3
+JVM storeserv-lagom Old GC Counts - Green 2a757970-d602-11e7-a774-c3d7f8e4d9bd
+ row: 10
+ col:7
+ index: 21
+ size_x: 6
+ size_y: 3
+JVM storeserv-lagom Old GC Times - Green AWPzpKj9g7hQUHFzc7oL
+ row: 10
+ col:1
+ index: 22
+ size_x: 6
+ size_y: 3
+
+Cluster Health - Green
+StoreServ Lagom Firehose total Ingest Rate (all nodes) Green c9ea26d0-cafa-11e7-94cb-33347f0a1ac3
+ row: 7
+ col:1
+ index: 11
+ size_x: 12
+ size_y: 3
+
+StoreServ Lagom Actor Mailbox Size (Max) - Green 3ba683c0-ca12-11e7-8d15-292759495130
+ row: 10
+ col:1
+ index: 12
+ size_x: 12
+ size_y: 3
+JVM storeserv-lagom Heap used - Green e098b250-d60a-11e7-ba8b-3b56c10e0bd3
+ row: 13
+ col:1
+ index: 13
+ size_x: 12
+ size_y: 3
+StoreServ-Lagom-Blue-H4-Pro-Log-Rates
+ row: 16
+ col:1
+ index: 14
+ size_x: 12
+ size_y: 3
+StoreServ Lagom Cassandra Read Counts - Green AWSUShsh76R-ZxlphMwa
+ row: 22
+ col:1
+ index: 16
+ size_x: 12
+ size_y: 2
+StoreServ Lagom Blue Split brain resolver event - green AWSUUWoL76R-ZxlphMwe
+ row: 21
+ col:1
+ index: 18
+ size_x: 12
+ size_y: 1
+StoreServ Lagom Beige Log Rates AWRrzXe0PINf1fPA4nUf 
+ row: 19
+ col:1
+ index: 19
+ size_x: 12
+ size_y: 2
+StoreServ Lagom Cassandra Read Times - green AWSUcDwV76R-ZxlphMwf
+ row: 24
+ col:1
+ index: 20
+ size_x: 12
+ size_y: 3
+Akka Cluster Reachable Nodes Storeserv-lagom - green AWSU5wYQ76R-ZxlphMwi
+ row: 1
+ col:5
+ index: 21
+ size_x: 8
+ size_y: 3
+Akka Cluster Unreachable Nodes Storeserv-lagom - green AWSU58uC76R-ZxlphMwj
+ row: 4
+ col:5
+ index: 22
+ size_x: 8
+ size_y: 3
+StoreServ Lagom Running Actors Over Time Green (Max count per bucket) AWAse32HgsJN7hbIeuQb
+ row: 27
+ col:1
+ index: 23
+ size_x: 12
+ size_y: 3
+StoreServ Lagom Green Table of Contents AWAyeSGMgsJN7hbImgPx
+ row: 1
+ col:1
+ index: 24
+ size_x: 4
+ size_y: 6
+
+User Access Metrics - Green
+7525baf0-cd43-11e8-a5e3-e9e2ce737cc7 Nan
+ row: 1
+ col:1
+ index: 1
+ size_x: 6
+ size_y: 3
+975827c0-cd43-11e8-a5e3-e9e2ce737cc7 Nan
+ row: 1
+ col:7
+ index: 2
+ size_x: 6
+ size_y: 3
+c81e4510-cd43-11e8-a5e3-e9e2ce737cc7 Nan
+ row: 4
+ col:1
+ index: 3
+ size_x: 6
+ size_y: 3
+
+Consumer Lag Metrics - Green
+StoreServ Lagom Green Kafka Consumer Lag Stats-Full-Feed-Storeserv-Avro AWFxoFPa-shruz57By4f
+ row: 1
+ col:4
+ index: 1
+ size_x: 9
+ size_y: 3
+StoreServ Lagom Green Table of Contents AWAyeSGMgsJN7hbImgPx
+ row: 1
+ col: 1
+ index: 3
+ size_x: 3
+ size_y: 9
+AWPRCG-9EvuRc-TyWCjL Nan
+ row: 4
+ col: 4
+ index: 4
+ size_x: 9
+ size_y: 3
+
+StoreServ Elasticsearch Push Green
+2b1d3e00-d230-11e8-a5e3-e9e2ce737cc7 Nan
+ row: 7
+ col: 7
+ index: 2
+ size_x: 6
+ size_y: 3
+7d187f90-d234-11e8-a5e3-e9e2ce737cc7 Nan
+ row: 7
+ col: 1
+ index: 3
+ size_x: 6
+ size_y: 3
+e8504170-d23a-11e8-a5e3-e9e2ce737cc7 Nan
+ row: 10
+ col: 7
+ index: 4
+ size_x: 6
+ size_y: 3
+2058aa00-d248-11e8-a5e3-e9e2ce737cc7 Nan
+ row: 10
+ col: 1
+ index: 6
+ size_x: 6
+ size_y: 3
+60da3c20-f40c-11e8-bd8c-f30f7f2eb6d7 Nan
+ row: 1
+ col: 7
+ index: 10
+ size_x: 6
+ size_y: 3
+3par-full Elasticsearch Publishing Rate (Total Across instances) - Green db2d8ae0-f40c-11e8-bd8c-f30f7f2eb6d7 Nan
+ row: 1
+ col: 1
+ index: 11
+ size_x: 6
+ size_y: 3
+StoreServ Elasticsearch Push Rate System Objects Green e2b387e0-f4b3-11e8-bd8c-f30f7f2eb6d7
+ row: 4
+ col: 1
+ index: 12
+ size_x: 6
+ size_y: 3
+StoreServ Elasticsearch System Object Split Rate Green a59d7070-d2f1-11e8-a5e3-e9e2ce737cc7 Nan
+ row: 13
+ col: 1
+ index: 13
+ size_x: 6
+ size_y: 3
+StoreServ Elasticsearch Push Monthly Systems Green 46754900-d61c-11e8-a5e3-e9e2ce737cc7
+ row: 4
+ col: 7
+ index: 14
+ size_x: 6
+ size_y: 3
+
+StoreServ Lagom Green Serialization Times
+StoreServ Lagom Green CaseNotification Serialization Time AWEvESfJgsJN7hbImzR9
+ row: 8
+ col: 1
+ index: 1
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Green Perform Delta Serialization Time AWEvDmAAgsJN7hbImzRI
+ row: 8
+ col: 7
+ index: 2
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Green System Files Actor State Serialization Time AWEvDyEegsJN7hbImzRJ
+ row: 5
+ col: 7
+ index: 3
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Green SystemDataPoint Serialization Time AWEvEB2NgsJN7hbImzRK
+ row: 5
+ col: 1	
+ index: 4
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Green Table of Contents AWAyeSGMgsJN7hbImgPx
+ row: 1
+ col: 1	
+ index: 5
+ size_x: 4
+ size_y: 4
+StoreServ Lagom Green SystemFilesActor Message Processing Time Milliseconds AWEQqAaDgsJN7hbImm22
+ row: 1
+ col: 5	
+ index: 7
+ size_x: 8
+ size_y: 4
+StoreServ Lagom Green Normal File Parsing Time AWEPYG-rgsJN7hbImm20
+ row: 11
+ col: 1	
+ index: 8
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Green Refill Cache File Parsing Time AWEPYYx4gsJN7hbImm21
+ row: 11
+ col: 7	
+ index: 9
+ size_x: 6
+ size_y: 3
+
+Lagom Speeds and Feeds - Green
+Lagom-File-Ingestion-Rate-From-Kafka-Total-(Cinnamon-Metrics)
+ row: 10
+ col: 1	
+ index: 1
+ size_x: 6
+ size_y: 3
+Lagom-File-Ingestion-Rate-From-Kafka-(Cinnamon-Metrics)
+ row: 10
+ col: 7	
+ index: 2
+ size_x: 6
+ size_y: 3
+Lagom-Output-Rate
+ row: 16
+ col: 7	
+ index: 5
+ size_x: 6
+ size_y: 3
+Lagom-Output-Rate-Total
+ row: 16
+ col: 1	
+ index: 6
+ size_x: 6
+ size_y: 3
+Lagom-Data-Ingestion-Rate-From-Kafka-Total-(Cinnamon-Metrics)
+ row: 13
+ col: 7	
+ index: 10
+ size_x: 6
+ size_y: 3
+Lagom-Monthly-File-Ingestion-Rate-From-Kafka-Total-(Cinnamon-Metrics)
+ row: 13
+ col: 1	
+ index: 11
+ size_x: 6
+ size_y: 3
+StoreServ-Lagom-Blue-H4-Pro-Log-Rates
+ row: 19
+ col: 7	
+ index: 13
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Firehose total Ingest Rate (all nodes) Green c9ea26d0-cafa-11e7-94cb-33347f0a1ac3
+ row: 1
+ col: 5	
+ index: 26
+ size_x: 8
+ size_y: 3
+StoreServ Lagom Green Table of Contents AWAyeSGMgsJN7hbImgPx
+ row: 1
+ col: 1	
+ index: 27
+ size_x: 4
+ size_y: 6
+Average File Immigration Age Green AWBbWu7SgsJN7hbImm2v
+ row: 19
+ col: 1	
+ index: 28
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Files Completely Processed (all nodes) Green AWFH_9jg-shruz57AqBl
+ row: 4
+ col: 5	
+ index: 31
+ size_x: 8
+ size_y: 3
+StoreServ Lagom Files Ignored (all nodes) Green AWTTU6MWz_EE0UgWeHaO
+ row: 5
+ col: 7	
+ index: 32
+ size_x: 8
+ size_y: 3
+
+StoreServ Lagom Actor Metrics - Green
+StoreServ Lagom Actor Mailbox Size (Max) - Green 3ba683c0-ca12-11e7-8d15-292759495130
+ row: 1
+ col: 5	
+ index: 1
+ size_x: 8
+ size_y: 3
+StoreServ Lagom Running Actors Over Time Green (Max count per bucket) AWAse32HgsJN7hbIeuQb
+ row: 4
+ col: 7	
+ index: 2
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Running SystemFiles Actors Over Time Green AWAtbFXTgsJN7hbIw18j
+ row: 4
+ col: 1	
+ index: 3
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Green Table of Contents AWAyeSGMgsJN7hbImgPx
+ row: 1
+ col: 1 	
+ index: 4
+ size_x: 4
+ size_y: 3
+StoreServ Lagom Remote Message Deserialization Time - Green AWBGXgmcgsJN7hbImgP2
+ row: 7
+ col: 1 	
+ index: 5
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Remote Message Received Size - Green AWBGYRiwgsJN7hbImgP4
+ row: 7
+ col: 7 	
+ index: 6
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Remote Message Sent Size - Green AWBGYoOxgsJN7hbImgP5
+ row: 10
+ col: 7 	
+ index: 7
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Remote Message Serialization Time - Green AWBGX7yNgsJN7hbImgP3
+ row: 10
+ col: 1 	
+ index: 8
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Green Actor Mailbox Time AWEk_IUfgsJN7hbImsfK
+ row: 13
+ col: 1 	
+ index: 9
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Green Actor Processing Time Average AWElHE7-gsJN7hbImslb
+ row: 13
+ col: 7 	
+ index: 10
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Green SystemFilesActor Message Processing Rates AWEoofE2gsJN7hbImvLQ
+ row: 16
+ col: 1 	
+ index: 11
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Green SystemFilesActor Sent Message Rate AWEoozGygsJN7hbImvLR
+ row: 16
+ col: 7 	
+ index: 12
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Green SystemActors Running By State AWH4CKbm-shruz57EKD2
+ row: 19
+ col: 1 	
+ index: 13
+ size_x: 6
+ size_y: 3
+
+StoreServ Lagom Processing Rates - Green
+StoreServ-Lagom-Sunny-Day-Rates
+ row: 4
+ col: 1 	
+ index: 3
+ size_x: 6
+ size_y: 3
+StoreServ-Lagom-Bad-File-Rates
+ row: 7
+ col: 7 	
+ index: 4
+ size_x: 6
+ size_y: 3
+StoreServ-Lagom-Duplicate-File-Rates
+ row: 7
+ col: 1 	
+ index: 5
+ size_x: 6
+ size_y: 3
+StoreServ-Lagom-Out-Of-Order-Rates
+ row: 10
+ col: 7 	
+ index: 6
+ size_x: 6
+ size_y: 3
+File-Reprocessing-Rate
+ row: 13
+ col: 7 	
+ index: 9
+ size_x: 6
+ size_y: 3
+StoreServ-Lagom-New-Files-Inserted-to-Cassandra-(Cinnamon-Metrics)
+ row: 10
+ col: 1	
+ index: 10
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Green Table of Contents AWAyeSGMgsJN7hbImgPx
+ row: 1
+ col: 1	
+ index: 11
+ size_x: 6
+ size_y: 3
+StoreServ-Lagom-Blue-H4-Pro-Bad-Files
+ row: 16
+ col: 1	
+ index: 12
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Green File Parsing Exceptions AWBQmlFzgsJN7hbImm2u
+ row: 16
+ col: 7	
+ index: 13
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Green Normal File Parsing Time AWEPYG-rgsJN7hbImm20
+ row: 19
+ col: 1	
+ index: 16
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Green Refill Cache File Parsing Time AWEPYYx4gsJN7hbImm21
+ row: 19
+ col: 7	
+ index: 17
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Green SystemFilesActor Message Processing Time Milliseconds AWEQqAaDgsJN7hbImm22
+ row: 22
+ col: 1	
+ index: 18
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Sunny Day Rates Total Green AWFHpLsL-shruz57Aplc
+ row: 4
+ col: 7	
+ index: 19
+ size_x: 6
+ size_y: 3
+StoreServ Lagom Number of Systems that Need Reprocessing - Green AWKMJ0oRLuf6l1WDe87v
+ row: 13
+ col: 1	
+ index: 21
+ size_x: 6
+ size_y: 3
+AWLZnEGmLuf6l1WDgR3K NAn
+ row: 22
+ col: 7	
+ index: 22
+ size_x: 6
+ size_y: 3
+System Actor File Processing Rate - Green AWVmKVkGrypEwhTurnOQ
+ row: 1
+ col: 7	
+ index: 23
+ size_x: 6
+ size_y: 3
+
+
+

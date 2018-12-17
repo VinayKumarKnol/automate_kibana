@@ -1,0 +1,53 @@
+dashboard:
+  -  id: systemfilesactor_metrics_{{ env }}
+     title: SystemFilesActor Metrics -  {{ env }}
+     visualIds:
+
+       -
+         id: visualization:storeserv_lagom_{{ env }}_table_of_contents
+         index: 1
+         row: 1
+         col: 1
+         delim: ','
+       -
+         id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_error_timeout_rate
+         index: 2
+         row: 1
+         col: 7
+         delim: ','
+       -
+         id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_warn_timeout_rate
+         index: 3
+         row: 2
+         col: 1
+         delim: ','
+       -
+         id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_crashed_rate
+         index: 4
+         row: 2
+         col: 7
+         delim: ','
+
+       - id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_initialization_rate
+         index: 5
+         row: 3
+         col: 1
+         delim: ','
+
+       - id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_processing_failure_rates
+         index: 6
+         row: 3
+         col: 7
+         delim: ','
+
+       - id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_passivation_rate
+         index: 7
+         row: 4
+         col: 1
+         delim: ','
+
+       - id: visualization:storeserv_lagom_{{ env }}_systemactors_running_by_state
+         index: 8
+         row: 4
+         col: 7
+         delim: ''
