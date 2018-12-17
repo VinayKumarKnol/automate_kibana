@@ -94,9 +94,11 @@ dashobard:
 
 
       - id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_sent_message_rate
+        row: 16
+        col: 7     
         index: 12
-        row: 6
-        col: 7
+        size_x: 6
+        size_y: 3
         delim: ','
 
 
