@@ -35,9 +35,11 @@ dashboard:
          delim: ','
 
        - id: visualization:jvm_storeserv_lagom_young_gc_counts_{{ env }}
-         index: 5
-         row: 3
+         row: 7
          col: 1
+         index: 18
+         size_x: 6
+         size_y: 3
          delim: ','
 
        - id: visualization:jvm_storeserv_lagom_young_gc_times_{{ env }}
