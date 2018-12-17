@@ -36,9 +36,11 @@ dashboard:
          delim: ','
 
        - id: visualization:jvm_storeserv_lagom_heap_used_{{ env }}
-         index: 5
-         row: 3
+         row: 13
          col: 1
+         index: 13
+         size_x: 12
+         size_y: 3
          delim: ','
 
        - id: visualization:storeserv_lagom_{{ env }}_log_rates
