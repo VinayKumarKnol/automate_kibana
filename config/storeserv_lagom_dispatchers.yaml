@@ -45,9 +45,9 @@ dashboard:
          delim: ','
 
        - id: visualization:storeserv_lagom_{{ env }}_dispatchers_pool_size
-         row: 7
-         col: 7
-         index: 6
+         row: 13
+         col: 1
+         index: 8
          size_x: 6
          size_y: 3
          delim: ','
