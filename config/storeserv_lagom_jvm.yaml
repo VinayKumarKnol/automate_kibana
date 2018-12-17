@@ -5,9 +5,11 @@ dashboard:
 
        -
          id: visualization:storeserv_lagom_{{ env }}_table_of_contents
-         index: 1
          row: 1
          col: 1
+         index: 17
+         size_x: 4
+         size_y: 3
          delim: ','
        -
          id: visualization:jvm_storeserv_lagom_heap_used_{{ env }}
