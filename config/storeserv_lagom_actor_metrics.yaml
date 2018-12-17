@@ -1,65 +1,93 @@
 dashobard:
-  -  id: lagom_speeds_and_feeds_{{ env }}
-     title: Lagom Speeds and Feeds -  {{ env }}
-     visualIds:
+   -  id: storeserv_lagom_actor_metrics_{{ env }}
+      title: Storeserv Lagom Actor Metrics -  {{ env }}
+      visualIds:
 
-       -
-         id: visualization:storeserv_lagom_{{ env }}_table_of_contents
-         index: 1
-         row: 1
-         col: 1
-         delim: ','
-       -
-         id: visualization:storeserv_lagom_firehose_total_ingest_rate_all_nodes_{{ env }}
-         index: 2
-         row: 1
-         col: 7
-         delim: ','
-       -
-         id: visualization:lagom_file_ingestion_rate_from_kafka_total_cinnamon_metrics_{{ env }}
-         index: 3
-         row: 2
-         col: 1
-         delim: ','
-       -
-         id: visualization:storeserv_lagom_files_completely_processed_all_nodes_{{ env }}
-         index: 4
-         row: 2
-         col: 7
-         delim: ','
+      -
+        id: visualization:storeserv_lagom_{{ env }}_table_of_contents
+        row: 1
+        col: 1     
+        index: 4
+        size_x: 4
+        size_y: 3
+        delim: ','
+      -
+        id: visualization:storeserv_lagom_actor_mailbox_size_max_{{ env }}
+        index: 2
+        row: 1
+        col: 7
+        delim: ','
+      -
+        id: visualization:storeserv_lagom_running_actors_over_time_{{ env }}_max_count_per_bucket
+        index: 3
+        row: 2
+        col: 1
+        delim: ','
+      -
+        id: visualization:storeserv_lagom_running_systemfiles_actors_over_time_{{ env }}
+        index: 4
+        row: 2
+        col: 7
+        delim: ','
 
-       - id: visualization:lagom_monthly_file_ingestion_rate_from_kafka_total_cinnamon_metrics_{{ env }}
-         index: 5
-         row: 3
-         col: 1
-         delim: ','
+      - id: visualization:storeserv_lagom_remote_message_deserialization_time_{{ env }}
+        index: 5
+        row: 3
+        col: 1
+        delim: ','
 
-       - id: visualization:storeserv_lagom_files_ignored_all_nodes_{{ env }}
-         index: 6
-         row: 3
-         col: 7
-         delim: ','
+      - id: visualization:storeserv_lagom_remote_message_received_size_{{ env }}
+        index: 6
+        row: 3
+        col: 7
+        delim: ','
 
-       - id: visualization:lagom_output_rate_{{ env }}_total
-         index: 7
-         row: 4
-         col: 1
-         delim: ','
+      - id: visualization:storeserv_lagom_remote_message_serialization_time_{{ env }}
+        index: 7
+        row: 4
+        col: 1
+        delim: ','
 
-       - id: visualization:lagom_data_ingestion_rate_from_kafka_total_cinnamon_metrics_{{ env }}
-         index: 8
-         row: 4
-         col: 7
-         delim: ','
+      - id: visualization:storeserv_lagom_{{ env }}_actor_mailbox_time
+        index: 8
+        row: 4
+        col: 7
+        delim: ','
 
-       - id: visualization:average_file_immigration_age_{{ env }}
-         index: 9
-         row: 5
-         col: 1
-         delim: ','
+      - id: visualization:storeserv_lagom_remote_message_sent_size_{{ env }}
+        index: 9
+        row: 5
+        col: 1
+        delim: ','
 
-       - id: visualization:storeserv_lagom_{{ env }}_log_rates
-         index: 10
-         row: 5
-         col: 7
-         delim: ''
+      - id: visualization:storeserv_lagom_{{ env }}_actor_processing_time_average
+        index: 10
+        row: 5
+        col: 7
+        delim: ','
+
+      - id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_message_processing_rates
+        index: 11
+        row: 6
+        col: 1
+        delim: ','
+
+
+      - id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_sent_message_rate
+        index: 12
+        row: 6
+        col: 7
+        delim: ','
+
+
+      - id: visualization:storeserv_lagom_{{ env }}_systemactors_running_by_state
+        index: 13
+        row: 7
+        col: 1
+        delim: ','
+
+      - id: visualization:storeserv_lagom_actor_stash_size_max_{{ env }}
+        index: 14
+        row: 7
+        col: 7
+        delim: '' 
