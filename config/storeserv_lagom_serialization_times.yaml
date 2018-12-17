@@ -46,9 +46,11 @@ dashboard:
          delim: ','
 
        - id: visualization:storeserv_lagom_{{ env }}_perform_delta_serialization_time
-         index: 6
-         row: 3
+         row: 8
          col: 7
+         index: 2
+         size_x: 6
+         size_y: 3
          delim: ','
 
        - id: visualization:storeserv_lagom_{{ env }}_normal_file_parsing_time
