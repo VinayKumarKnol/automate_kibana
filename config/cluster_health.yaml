@@ -44,9 +44,11 @@ dashboard:
          delim: ','
 
        - id: visualization:storeserv_lagom_{{ env }}_log_rates
-         index: 6
-         row: 3
-         col: 7
+         row: 19
+         col: 1
+         index: 19
+         size_x: 12
+         size_y: 2
          delim: ','
 
        - id: visualization:storeserv_lagom_deadletter_event_{{ env }}
