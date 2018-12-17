@@ -53,9 +53,11 @@ dashboard:
          delim: ','
 
        - id: visualization:lagom_output_rate_{{ env }}_total
-         index: 7
-         row: 4
-         col: 1
+         row: 16
+         col: 1 
+         index: 6
+         size_x: 6
+         size_y: 3
          delim: ','
 
        - id: visualization:lagom_data_ingestion_rate_from_kafka_total_cinnamon_metrics_{{ env }}
