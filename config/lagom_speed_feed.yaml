@@ -45,9 +45,11 @@ dashboard:
          delim: ','
 
        - id: visualization:storeserv_lagom_files_ignored_all_nodes_{{ env }}
-         index: 6
-         row: 3
-         col: 7
+         row: 5
+         col: 7 
+         index: 32
+         size_x: 8
+         size_y: 3
          delim: ','
 
        - id: visualization:lagom_output_rate_{{ env }}_total
