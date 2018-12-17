@@ -111,7 +111,9 @@ dashobard:
         delim: ','
 
       - id: visualization:storeserv_lagom_actor_stash_size_max_{{ env }}
-        index: 14
-        row: 7
-        col: 7
+        row: 1
+        col: 5 
+        index: 1
+        size_x: 8
+        size_y: 3
         delim: '' 
