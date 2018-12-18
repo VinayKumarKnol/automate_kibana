@@ -45,9 +45,11 @@ dashboard:
          delim: ','
 
        - id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_processing_failure_rates
+         row: 8
+         col: 7 
          index: 6
-         row: 3
-         col: 7
+         size_x: 6
+         size_y: 3
          delim: ','
 
        - id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_passivation_rate
