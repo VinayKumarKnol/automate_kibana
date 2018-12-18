@@ -19,12 +19,14 @@ dashboard:
          size_x: 8
          size_y: 3
          delim: ','
-     #  -
-    #     id: visualization:jvm_storeserv_lagom_heap_used_{{ env }}
-      #   index: 3
-       #  row: 2
-        # col: 1
-        # delim: ','
+
+#       -
+#        id: visualization:jvm_storeserv_lagom_heap_used_{{ env }}
+#         index: 3
+#         row: 2
+#         col: 1
+#         delim: ','
+
        - id: visualization:jvm_storeserv_lagom_max_heap_{{ env }}
          row: 4
          col: 7

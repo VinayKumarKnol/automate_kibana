@@ -36,13 +36,13 @@ dashboard:
          size_y: 3
          delim: ','
 
-       # - id: visualization:storeserv_lagom_{{ env }}_active_threads_max
-       #   row: 7
-       #   col: 1
-       #   index: 10
-       #   size_x: 6
-       #   size_y: 3
-       #   delim: ','
+#      - id: visualization:storeserv_lagom_{{ env }}_active_threads_max
+#        row: 7
+#        col: 1
+#        index: 10
+#        size_x: 6
+#        size_y: 3
+#        delim: ','
 
        - id: visualization:storeserv_lagom_{{ env }}_dispatchers_pool_size
          row: 13
