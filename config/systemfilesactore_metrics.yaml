@@ -37,9 +37,11 @@ dashboard:
          delim: ','
 
        - id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_initialization_rate
-         index: 5
-         row: 3
-         col: 1
+         row: 8
+         col: 1 
+         index: 3
+         size_x: 6
+         size_y: 3
          delim: ','
 
        - id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_processing_failure_rates
