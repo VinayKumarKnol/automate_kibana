@@ -13,9 +13,11 @@ dashboard:
          delim: ','
        -
          id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_error_timeout_rate
-         index: 2
          row: 1
-         col: 7
+         col: 5 
+         index: 2
+         size_x: 8
+         size_y: 4
          delim: ','
        -
          id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_warn_timeout_rate
