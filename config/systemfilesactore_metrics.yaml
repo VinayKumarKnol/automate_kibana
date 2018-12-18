@@ -29,9 +29,11 @@ dashboard:
          delim: ','
        -
          id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_crashed_rate
+         row: 5
+         col: 7 
          index: 4
-         row: 2
-         col: 7
+         size_x: 6
+         size_y: 3
          delim: ','
 
        - id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_initialization_rate
