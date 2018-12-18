@@ -1,0 +1,110 @@
+dashboard:
+  -  id: storeserv_lagom_processing_rates_{{ env }}
+     title: Storeserv Lagom Processing Rates -  {{ env }}
+     visualIds:
+
+       -
+         id: visualization:storeserv_lagom_{{ env }}_table_of_contents
+         row: 1
+         col: 1 
+         index: 11
+         size_x: 6
+         size_y: 3
+         delim: ','
+
+#      -
+#        id: visualization:system_actor_file_processing_rate_total_{{ env }}
+#        row: 1
+#        col: 7 
+#        index: 23
+#        size_x: 6
+#        size_y: 3
+#        delim: ','
+
+       -
+         id: visualization:storeserv_lagom_sunny_day_rates_{{ env }}
+         row: 4
+         col: 1     
+         index: 3
+         size_x: 6
+         size_y: 3
+         delim: ','
+       -
+         id: visualization:storeserv_lagom_duplicate_file_rates_{{ env }}
+         row: 7
+         col: 1     
+         index: 5
+         size_x: 6
+         size_y: 3
+         delim: ','
+
+       - id: visualization:storeserv_lagom_bad_file_rates_{{ env }}
+         row: 7
+         col: 7     
+         index: 4
+         size_x: 6
+         size_y: 3
+         delim: ','
+
+       - id: visualization:storeserv_lagom_new_files_inserted_to_cassandra_cinnamon_metrics_{{ env }}
+         row: 10
+         col: 1 
+         index: 10
+         size_x: 6
+         size_y: 3
+         delim: ','
+
+       - id: visualization:storeserv_lagom_out_of_order_rates_{{ env }}
+         row: 10
+         col: 7     
+         index: 6
+         size_x: 6
+         size_y: 3
+         delim: ','
+
+       - id: visualization:storeserv_lagom_number_of_systems_that_need_reprocessing_{{ env }}
+         row: 13
+         col: 1 
+         index: 21
+         size_x: 6
+         size_y: 3
+         delim: ','
+
+       - id: visualization:file_reprocessing_rate_{{ env }}
+         row: 13
+         col: 7     
+         index: 9
+         size_x: 6
+         size_y: 3
+         delim: ','
+
+       - id: visualization:storeserv_lagom_{{ env }}_normal_file_parsing_time
+         row: 19
+         col: 1 
+         index: 16
+         size_x: 6
+         size_y: 3
+         delim: ','
+
+       - id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_message_processing_rates
+         row: 16
+         col: 1     
+         index: 11
+         size_x: 6
+         size_y: 3
+         delim: ','
+
+
+       - id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_message_processing_time_milliseconds
+         row: 22
+         col: 1 
+         index: 18
+         size_x: 6
+         size_y: 3
+         delim: ','
+
+       - id: visualization:storeserv_lagom_file_reprocessing_time_{{ env }}
+         index: 13
+         row: 7
+         col: 1
+         delim: ''

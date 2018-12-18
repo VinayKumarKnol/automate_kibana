@@ -1,0 +1,119 @@
+dashobard:
+   -  id: storeserv_lagom_actor_metrics_{{ env }}
+      title: Storeserv Lagom Actor Metrics -  {{ env }}
+      visualIds:
+
+      -
+        id: visualization:storeserv_lagom_{{ env }}_table_of_contents
+        row: 1
+        col: 1     
+        index: 4
+        size_x: 4
+        size_y: 3
+        delim: ','
+      -
+        id: visualization:storeserv_lagom_actor_mailbox_size_max_{{ env }}
+        row: 1
+        col: 5 
+        index: 1
+        size_x: 8
+        size_y: 3
+        delim: ','
+      -
+        id: visualization:storeserv_lagom_running_actors_over_time_{{ env }}_max_count_per_bucket
+        row: 4
+        col: 7 
+        index: 2
+        size_x: 6
+        size_y: 3
+        delim: ','
+      -
+        id: visualization:storeserv_lagom_running_systemfiles_actors_over_time_{{ env }}
+        row: 4
+        col: 1 
+        index: 3
+        size_x: 6
+        size_y: 3
+        delim: ','
+
+      - id: visualization:storeserv_lagom_remote_message_deserialization_time_{{ env }}
+        row: 7
+        col: 1     
+        index: 5
+        size_x: 6
+        size_y: 3
+        delim: ','
+
+      - id: visualization:storeserv_lagom_remote_message_received_size_{{ env }}
+        row: 7
+        col: 7     
+        index: 6
+        size_x: 6
+        size_y: 3
+        delim: ','
+
+      - id: visualization:storeserv_lagom_remote_message_serialization_time_{{ env }}
+        row: 10
+        col: 1     
+        index: 8
+        size_x: 6
+        size_y: 3
+        delim: ','
+
+      - id: visualization:storeserv_lagom_{{ env }}_actor_mailbox_time
+        row: 13
+        col: 1     
+        index: 9
+        size_x: 6
+        size_y: 3
+        delim: ','
+
+      - id: visualization:storeserv_lagom_remote_message_sent_size_{{ env }}
+        row: 10
+        col: 7     
+        index: 7
+        size_x: 6
+        size_y: 3
+        delim: ','
+
+      - id: visualization:storeserv_lagom_{{ env }}_actor_processing_time_average
+        row: 13
+        col: 7     
+        index: 10
+        size_x: 6
+        size_y: 3
+        delim: ','
+
+      - id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_message_processing_rates
+        row: 16
+        col: 1     
+        index: 11
+        size_x: 6
+        size_y: 3
+        delim: ','
+
+
+      - id: visualization:storeserv_lagom_{{ env }}_systemfilesactor_sent_message_rate
+        row: 16
+        col: 7     
+        index: 12
+        size_x: 6
+        size_y: 3
+        delim: ','
+
+
+      - id: visualization:storeserv_lagom_{{ env }}_systemactors_running_by_state
+        row: 19
+        col: 1     
+        index: 13
+        size_x: 6
+        size_y: 3
+        delim: ','
+
+      - id: visualization:storeserv_lagom_actor_stash_size_max_{{ env }}
+        row: 1
+        col: 5 
+        index: 1
+        size_x: 8
+        size_y: 3
+        delim: '' 
