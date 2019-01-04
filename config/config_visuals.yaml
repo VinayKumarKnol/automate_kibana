@@ -1,0 +1,16 @@
+---
+visuals:
+- id: visualization:some_config_for_{{ env }}
+  envs:
+  - red
+  - green
+  - blue
+  title: "Storeserv Lagom {{ env }} File Read From Cassandra Time"
+  visState: >
+    {\"title\":\"StoreServ Lagom {{ env }} Cassandra Processed Data Read Times\",\"type\":\"line\",\"params\":{\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{\"text\":\"@timestamp per 30 minutes\"}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Millis\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"line\",\"mode\":\"normal\",\"data\":{\"label\":\"Millis\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false,\"type\":\"line\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"mean\",\"customLabel\":\"Millis\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"filters\",\"schema\":\"group\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"metric:\\\"systems.CaseNotificationReadCassandraTimeRecorderMillis\\\"\"}}},\"label\":\"Case Notification\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"metric:\\\"systems.PerformDeltaReadCassandraTimeRecorderMillis\\\"\"}}},\"label\":\"Perform Delta\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"metric:\\\"systems.ProcessingMetadataReadCassandraTimeRecorderMillis\\\"\"}}},\"label\":\"Processing Metadata\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"metric:\\\"systems.SystemDataPointReadCassandraTimeRecorderMillis\\\"\"}}},\"label\":\"System Data Point\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"metric:\\\"systems.NodeSlabUsageReadCassandraTimeRecorder\\\"\"}}},\"label\":\"Node Slab Usage\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"metric:\\\"systems.NodeSwapUsageReadCassandraTimeRecorder\\\"\"}}},\"label\":\"Node Swap Usage\"}]}}],\"listeners\":{}}
+  uiState: >
+    {}
+  kibanaSavedObjectMeta: >
+    {
+        "searchSourceJSON": "{\"filter\":[{\"meta\":{\"index\":\"cinnamon-metrics-*\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"application\",\"value\":\"storeserv-lagom-{{ env }}\"},\"query\":{\"match\":{\"application\":{\"query\":\"storeserv-lagom-{{ env }}\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"index\":\"AWXRlwxf3RS3G0MlMJRM\",\"highlightAll\":true,\"version\":true,\"query\":{\"match_all\":{}}}"
+      }
