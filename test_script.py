@@ -7,6 +7,8 @@ import yaml
 import requests
 import time
 import traceback
+from string import Template
+
 
 def main(args):
     config = ''
@@ -14,12 +16,13 @@ def main(args):
         config = yaml.load(config_yaml)
 
     tmp_path = args.template_conf
-    print tmp_path
 
     jConfigure = jinja_configure.JinjaTemplate(tmp_path)
     for visual in config['visuals']:
-        print jConfigure.make_file(visual)
-
+        generic_json = jConfigure.make_file(visual)
+    for env in visual['target_environments']:
+        fixed_json = jConfigure.load_from_string(template=generic_json, env=env)
+        print fixed_json
 
 
 def parseArgs():

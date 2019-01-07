@@ -18,3 +18,8 @@ class JinjaTemplate():
 
     def make_file(self, meta_data):
         return self.jinjaEnv_conf.get_template(self.conf_file).render(meta_data)
+
+    def load_from_string(self, template, **kwargs):
+        template_loader = jinja2.Environment(loader=jinja2.BaseLoader)\
+            .from_string(template)
+        return template_loader.render(**kwargs)
