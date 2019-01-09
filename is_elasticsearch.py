@@ -8,11 +8,13 @@ class ElasticSearch:
         self.url = url
         self.index = index
 
-    def put_data(self, content):
-        dcos_elk_url = self.url + '/' + self.index + '/_doc/'
+    def put_data(self, content, id):
+        dcos_elk_url = self.url + '/' + self.index + '/doc/' + id
         if self.check_if_valid(self.url) is True:
-            response = json.loads(requests.put(dcos_elk_url, json=content).content)
+            response = json.loads(requests.post(dcos_elk_url, json=content).content)
             return response
+        else:
+            return None
 
     def get_data(self, query):
         # query = 'q=type:visualization&q=visualization.title=green&size=150'
