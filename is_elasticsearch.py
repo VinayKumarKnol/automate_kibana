@@ -15,9 +15,18 @@ class ElasticSearch:
             return response
 
     def get_data(self, query):
-        dcos_elk_url = self.url + '/' + self.index +
+        # query = 'q=type:visualization&q=visualization.title=green&size=150'
+        dcos_elk_url = self.url + '/' + self.index + '/doc/_search/?' + query
+        if self.check_if_valid(self.url) is True:
+            if self.check_index(self.index) is True:
+                return json.loads(requests.get(url=dcos_elk_url).content)
+            else:
+                return None
+        else:
+            return None
 
-    def check_if_valid(self, url):
+    @staticmethod
+    def check_if_valid(url):
         return requests.head(url).ok
 
     def check_index(self, index):
