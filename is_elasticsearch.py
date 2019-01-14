@@ -11,9 +11,15 @@ class ElasticSearch:
     def put_data(self, content, id):
         dcos_elk_url = self.url + '/' + self.index + '/doc/' + id
         if self.check_if_valid(self.url) is True:
-            response = json.loads(requests.post(dcos_elk_url, json=content).content)
-            return response
+            if self.check_index(self.index) is True:
+                print ">>status of visualisation: " + id + " :"
+                response = json.loads(requests.post(dcos_elk_url, json=content).content)
+                return response
+            else:
+                print '\n>>The Index used is Invalid.'
+                return None
         else:
+            print '\n>>The URL used is Invalid.'
             return None
 
     def get_data(self, query):
@@ -23,8 +29,10 @@ class ElasticSearch:
             if self.check_index(self.index) is True:
                 return json.loads(requests.get(url=dcos_elk_url).content)
             else:
+                print '\n>>The Index used is invalid.'
                 return None
         else:
+            print '\n>>This URL used is Invalid.'
             return None
 
     @staticmethod
