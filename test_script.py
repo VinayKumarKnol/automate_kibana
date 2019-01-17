@@ -22,7 +22,7 @@ def main(args):
         generic_json = jConfigure.make_file(visual)
     for env in visual['target_environments']:
         fixed_json = jConfigure.load_from_string(template=generic_json, env=env)
-        print fixed_json
+
 
 
 def parseArgs():
