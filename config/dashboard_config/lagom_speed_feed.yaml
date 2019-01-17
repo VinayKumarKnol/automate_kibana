@@ -53,7 +53,7 @@ dashboard:
          delim: ','
 
        -
-         col: 7,
+         col: 7
          id: "AWPzVs51c4NZeeLJb6dn"
          panelIndex: 38
          row: 13
@@ -113,7 +113,7 @@ dashboard:
          delim: ','
 
        -
-         col: 7,
+         col: 7
          id: "AWRcm4PxPINf1fPA4TZL"
          panelIndex: 46
          row: 22
