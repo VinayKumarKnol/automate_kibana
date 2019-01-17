@@ -2,8 +2,8 @@ dashboard:
   -  id: lagom_speeds_and_feeds_{{ env }}_DEMO
      title: Lagom Speeds and Feeds -  {{ env }}_DEMO
      visualIds:
-
-       - col: 1
+       -
+         col: 1
          id: "storeserv_lagom_{{ env }}_table_of_contents"
          panelIndex: 32
          row : 1
@@ -11,6 +11,7 @@ dashboard:
          size_y: 9
          type: "visualization"
          delim: ','
+
        -
          col: 4
          id: "AWPMKeQ1EvuRc-TyV27h"
