@@ -1,0 +1,167 @@
+#!/usr/bin/python
+import argparse
+import os
+import json
+import jinja2
+import yaml
+import requests
+import time
+import traceback
+import is_elasticsearch
+import jinja_configure
+
+# creates visualizations over kibana by reading meta data file.
+# global vars:
+# args: contains command line arguments.
+# @deprecated:
+# validateQuery(): not using it currently.
+
+def main(args):
+    # vars used:
+    # dcos_elk_url: contains elastic search url of a given env.
+    # visual_json: contains the json of visualizations (List).
+    # tmp_dir: contains the directory where the files are stored.
+    # id: contains the visual id.
+    # visual: name of the visual json file.
+    # log_file_location: contains the location of log file.
+    # payload: contains the actual json we need to put over kibana.
+    # request_result: contains the response after PUT our visual to kibana.
+    # exit_status: contains the script end status.
+    # Where 0 means success and 1 means error.
+    exit_status = 0
+    failed_ids = []
+    dcos_elk_url = fetchClusterName(args.dcos_cluster_name)
+    if dcos_elk_url is None:
+        print(">>Invalid DCOS Cluster url")
+        return
+
+    log_file_location = 'log/visual_logs.log'
+    log_file_dir, _ = os.path.split(log_file_location)
+    if not os.path.exists(log_file_dir):
+        os.makedirs(log_file_dir)
+
+    visuals_json, tmp_dir = load_config(args)
+    if len(visuals_json) is 0:
+        print ">>There are no visualisations to create."
+        return
+    for id, visual in visuals_json:
+        print id, visual
+        elk_url = dcos_elk_url + id
+        print elk_url
+        with open(tmp_dir + '/' + visual, 'r') as json_file:
+            try:
+                payload = json.load(json_file)
+                request_result = json.loads(requests.put(elk_url, json=payload).content)
+                print ">>status of visualisation: " + id + " :"
+                print request_result
+                logStatus(id, request_result, log_file_location)
+            except:
+                exit_status += 1
+                failed_ids.append(id)
+                logStatus(id, traceback.format_exc(), log_file_location)
+    if exit_status is not 0:
+        print '>>Following Ids FAILED:'
+        print '========================'
+        for id in failed_ids:
+            print id
+        print '========================'
+        exit("There's error while processing your meta-data and jsons. Check logs.")
+    else:
+        exit(0)
+
+
+def logStatus(visual_id, response, log_file_location):
+    # logs the output to put request we have thrown over kibana
+    # visual_id: contains the visual_id of the visualisation.
+    # response: json which contains the result of the request we have made.
+    # log_file_location: represents the location of the log file.
+
+    with open(log_file_location, 'a') as log_file:
+        message = time.strftime("%Y-%m-%d %H:%M:%S") + \
+                  ' : ' + visual_id + ' : ' + str(response)
+        log_file.write(message + '\n')
+
+
+# def fetchClusterName(dcos_cluster_name):
+    # fetches the name of the cluster
+    # dcos_cluster_name: contains the name of the cluster we are to work with
+    #                    defined through cl arguments.
+#    if "rigel" in dcos_cluster_name:
+#        return "http://monit-es-rigel.storefrontremote.com/.kibana/"
+#    elif "saturn" in dcos_cluster_name:
+#        return "http://elk-saturn.storefrontremote.com/.kibana/doc/"
+#    elif "neptune" in dcos_cluster_name:
+#        return "neptune"
+#    elif "jupiter" in dcos_cluster_name:
+#        return "jupiter"
+
+
+def create_bundle_conf_file(args, config, tmp_dir):
+    # creates the visual json from meta data.
+    # config: contains the meta data of visual.
+    # tmp_dir: directory where we want to put the visual json.
+    # file_name: contains the name of visualizations json.
+    # path_conf: contains the directory where we have the template file stored.
+    # filename_conf: contains the meta data file name.
+    # templateFilePath_conf: A File System Loader.
+    # jinjaEnv_conf: Environment config'd with loader.
+    # jTemplate_conf: contains the env specific meta data.
+    # outputFile_conf: contains the json file where we are writing the env specific
+    #                  visual json.
+    # returns: visual_id , file_name.
+    file_name = config['id'] + "-visualization.json"
+    path_conf, filename_conf = os.path.split(args.template_conf)
+    templateFilePath_conf = jinja2.FileSystemLoader(path_conf or './')
+    jinjaEnv_conf = jinja2.Environment(loader=templateFilePath_conf,
+                                       trim_blocks=True,
+                                       lstrip_blocks=True)
+    jTemplate_conf = jinjaEnv_conf.get_template(filename_conf).render(config)
+
+    outFile_conf = open(tmp_dir + '/' + file_name, 'w')
+    outFile_conf.write(jTemplate_conf)
+    outFile_conf.close()
+    return config['id'], file_name
+
+
+def load_config(args):
+    # loads the meta data and creates list of visuals to load.
+    # config: contains the visual config file.
+    # tmp_dir: contains the directory to store the visuals.
+    # file_locations: a List of visual jsons to load.
+    # returns: file locations and directory where all the visuals are stored.
+
+    with open(args.config) as config:
+        config = yaml.load(config)
+
+    tmp_dir = "tmp-visual-config-dir"
+    if not os.path.exists(tmp_dir):
+        os.makedirs(tmp_dir)
+
+    file_locations = []
+
+    for visual in config['visuals']:
+        visual['title'] = visual['title']
+        visual['id'] = visual['id'].lower()
+        file_locations.append(create_bundle_conf_file(args, visual, tmp_dir))
+        # if validateQuery(visual, fetchClusterName(args.dcos_cluster_name)):
+        #
+        # else:
+        #     print ">>Visual: " + visual['id']
+        #     print "Has wrong query."
+    return file_locations, tmp_dir
+
+
+def parseArgs():
+    parser = argparse.ArgumentParser(description='Python template engine using jinja2')
+    parser.add_argument('-c', '--config', type=str, required=True,
+                        help='Jinja2 template configuration yaml file')
+    parser.add_argument('-tc', '--template_conf', type=str, required=True,
+                        help='Jinja2 template file for config')
+    args = parser.parse_args()
+    return args
+
+
+args = parseArgs()
+if __name__ == '__main__':
+    exit(main(args))
+

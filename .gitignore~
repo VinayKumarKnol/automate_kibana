@@ -1,7 +1,5 @@
 .idea/
 .tmp-*/
-venv/
-*.pyc
 
 
 
